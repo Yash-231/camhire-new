@@ -22,7 +22,7 @@ function App() {
 
     <div className="App">
       <>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="black" variant="dark">
           <Container >
 
 
