@@ -34,7 +34,7 @@ const Blogs = () => {
                             </div>
                             <div className='card-body'>
                                 <p>
-                                    {d.body.slice(0, 375)}...
+                                    {d.body.slice(0, 250)}...
                                     <a href='' className='readMoreBtn'>Read More</a>
                                 </p>
                             </div>
@@ -48,11 +48,11 @@ const Blogs = () => {
                         <img src={d.imageUrl} alt=''/>
                             <div className='card-content'>
                                 <div className='card-title'>
-                                    <h2>{d.title.slice(0, 48)}...</h2>
+                                    <h2>{d.title.slice(0, 35)}...</h2>
                                 </div>
                                 <div className='card-body'>
                                     <p>
-                                        {d.body.slice(0, 160)}...
+                                        {d.body.slice(0, 100)}...
                                         <a href='' className='readMoreBtn'>Read More</a>
                                     </p>
                                 </div>
@@ -63,11 +63,11 @@ const Blogs = () => {
                         <img src={d.imageUrl} alt=''/>
                         <div className='card-content'>
                             <div className='card-title'>
-                                <h2>{d.title.slice(0, 48)}...</h2>
+                                <h2>{d.title.slice(0, 35)}...</h2>
                             </div>
                             <div className='card-body'>
                                 <p>
-                                    {d.body.slice(0, 160)}...
+                                    {d.body.slice(0, 100)}...
                                     <a href='' className='readMoreBtn'>Read More</a>
                                 </p>
                             </div>
