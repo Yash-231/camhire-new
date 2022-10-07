@@ -1,0 +1,241 @@
+.main-body {
+    width: 100%;
+    height: 3000px;
+    background: #121316;
+    padding: 0 15% 0 15%;
+}
+
+.heading{
+align-self: center;
+position: relative;
+padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.heading h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.row1{
+    position: relative;
+    width: 1420px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row1 img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.row1 .card-content{
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background: rgba(0, 0, 0, 0.84);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row1 .card-content .card-title{
+    position: relative;
+width: 100%;
+height: 50%;
+padding-top: auto;
+padding-bottom: auto;
+}
+
+.row1 .card-content .card-title h2{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 75px;
+/* identical to box height */
+text-align: left;
+color: #FFFFFF;
+}
+
+.row1 .card-content .card-body{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: 5px;
+}
+
+.row1 .card-content .card-body p{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #FFFFFF;
+text-align: left;
+}
+
+.left {
+position: relative;
+display: inline;
+float: left;
+width: 700px;
+height: 500px;
+margin-top: 160px;
+margin-bottom: 160px;
+margin-left: 88px;
+margin-right: 20px;
+}
+
+.left img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left .card-content{
+position: relative;
+width: 100%;
+height: 130px;
+background: rgba(0, 0, 0, 0.84);
+padding-left: 15px;
+padding-right: 15px;
+}
+
+.left .card-content .card-title{
+position: relative;
+width: 100%;
+height: 50%;
+padding-top: auto;
+padding-bottom: auto;
+}
+
+.left .card-content .card-title h2{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 75px;
+color: #FFFFFF;
+text-align: left;
+}
+
+.left .card-content .card-body{
+position: relative;
+    width: 100%;
+    height: 50%;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.left .card-content .card-body p{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #FFFFFF;
+text-align: left;
+}
+
+.right {
+    position: relative;
+    display: inline;
+    float: right;
+    width: 700px;
+    height: 500px;
+    margin-top: 160px;
+    margin-bottom: 160px;
+    margin-right: 87.22px;
+    }
+    
+    .right img{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .right .card-content{
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background: rgba(0, 0, 0, 0.84);
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+    
+    .right .card-content .card-title{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    padding-top: auto;
+    padding-bottom: auto;
+    }
+    
+    .right .card-content .card-title h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 75px;
+    color: #FFFFFF;
+    text-align: left;
+    }
+    
+    .right .card-content .card-body{
+    position: relative;
+        width: 100%;
+        height: 50%;
+        padding-top: auto;
+        padding-bottom: auto;
+    }
+    
+    .right .card-content .card-body p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    text-align: left;
+    }
+    
+.toggleBtn{
+    box-sizing: border-box;
+    position:relative;
+    top:43%;
+    left: 43%;
+    width: 220px;
+    height: 76px;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.btn{
+    position: absolute;
+    top:34%;
+    left: 34%;
+    align-self: center;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 45px;
+/* identical to box height */
+
+
+background: linear-gradient(91.89deg, #C526D2 1.09%, #6D4AE1 89.64%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+/* text-fill-color: transparent; */
+}
