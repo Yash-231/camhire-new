@@ -1,103 +1,87 @@
-import React from 'react';
-import mainLogo from '../images/camhire_logo.png';
-import shortVid from '../video/CamHire_vid.mp4';
-import data from '../data/data.json';
-import about_photo from '../images/landing_page.jpg';
-import {
-    BrowserRouter,
-    Link,
-    Routes,
-    Route,
-} from "react-router-dom";
+import React from "react";
+import mainLogo from "../images/camhire_logo.png";
+import shortVid from "../video/CamHire_vid.mp4";
+import data from "../data/data.json";
+import about_photo from "../images/landing_page.jpg";
+import "./Home.css";
+// import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 const Home = () => {
-    return (
-        <div classname="wrapper">
-            <div classname='header'>
-                <div className='left_quote'>
-                    <h2>Endless Possibilities with Camera just a Click Away</h2>
-                    <h3>We are the string which enables you to  connects the best photographers in easiest way possible</h3>
-                    <button >Load more</button>
-
-                </div>
-                <div className='right'>
-                    <div className='join_button'>
-                        <button>join us</button>
-                    </div>
-                    <div className='video'>
-                        <video autoPlay loop muted className='video'>
-                            <source src={shortVid} type="video/mp4" />
-                        </video>
-
-                    </div>
-                </div>
-
-            </div>
-            <div className='features' >
-                <div className='heading'>
-                    <h1> WHAT WE HAVE TO OFFER</h1>
-                </div>
-                <div className='row' >
-                    {data.Features
-                        ? data.Features.map((d, i) => (
-                            <div key={`${d.title}-${i}`} className='col-xs-6 col-md-3'>
-                                {' '}
-                                <h3 className="features-title" >{d.title}</h3>
-                                {' '}
-                                <i className={d.icon}></i>
-                                <p >{d.text}</p>
-                            </div>
-                        ))
-                        :
-                        'loading'
-                    }
-                </div>
-
-            </div>
-            <div className='about_us' >
-                <h1> ABOUT US</h1>
-                <div className='about_para' >
-                    <h6> {
-                        data.About.paragraph
-                    }</h6>
-
-                </div>
-                <div className='about_image' >
-
-                    <img src={about_photo} alt="/" />
-                </div>
-            </div>
-            <div className='photographers' >
-                <h1>Our Photographers</h1>
-                <div className='photograpger_images' >
-
-                </div>
-            </div>
-            <div className='blogs' >
-                <h1> Blogs</h1>
-                <div className='row1' ></div>
-                <div className='row2' >
-                    <div className='left2'></div>
-                    <div className='right2'></div>
-                </div>
-                <div className='row3'>
-
-                </div>
-
-            </div>
-            <div className='gallery'>
-                <h1>Gallery</h1>
-
-            </div>
-            <div className='contact'>
-                <div className='contact_left'>
-                    <h1>Contact Us</h1>
-                </div>
-                <div className='contact right'></div>
-            </div>
+  return (
+    <div classname="wrapper">
+      <div className="join-us">
+        <button>Join us</button>
+      </div>
+      <div className="header">
+        <div className="header__left">
+          <h3 className="header__h3">
+            Endless Possibilities with <b className="cam__text">Camera</b> just
+            a Click Away
+          </h3>
+          <h4 className="header__h4">
+            We are the string which enables you to connects the best
+            photographers in easiest way possible
+          </h4>
+          <button className="learn-more__button">Learn more</button>
         </div>
+        <div className="header__right">
+          <div className="video__container">
+            <video autoPlay loop muted className="video__player">
+              <source src={shortVid} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      <div className="features__container">
+        <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
+        <div className="features">
+          {data.Features
+            ? data.Features.map((d, i) => (
+                <div key={`${d.title}-${i}`} className="feature">
+                  <h4 className="feature__title">{d.title}</h4>
+                  <i className={`${d.icon} feature__icon`}></i>
+                  <p>{d.text}</p>
+                </div>
+              ))
+            : "Loading"}
+        </div>
+      </div>
+      <h1 classname="about-us__heading">ABOUT US</h1>
+      <div className="about-us">
+        <p className="about-us__para">{data.About.paragraph}</p>
+        <div className="about-us__image">
+          <img
+            src={about_photo}
+            style={{ width: "600px", height: "350px" }}
+            alt="/"
+          />
+        </div>
+      </div>
 
-    )
-}
+      <div className="photographers">
+        <h1 className="photographers__image">Our Photographers</h1>
+        <div className="photographers__images"></div>
+      </div>
+      <div className="blogs">
+        <h1>Blogs</h1>
+        <div className="row1"></div>
+        <div className="row2">
+          <div className="left2"></div>
+          <div className="right2"></div>
+        </div>
+        <div className="row3"></div>
+      </div>
+      <div className="gallery">
+        <h1>Gallery</h1>
+      </div>
+      <div className="contact">
+        <div className="contact_left">
+          <h1>Contact Us</h1>
+        </div>
+        <div className="contact right"></div>
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
