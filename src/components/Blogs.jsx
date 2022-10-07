@@ -1,81 +1,86 @@
-import React from 'react'
-import data from '../data/data.json'
+import React from 'react';
+import data from '../data/data.json';
+import { useState } from "react";
+import './Blogs.css'
 
 const Blogs = () => {
+
+    const [next, setNext] = useState(4);
+
+    const showMore = () => {
+        setNext(next + 4);
+    };
+
+    const showLess = () => {
+        setNext(4);
+    };
+
+
     return (
-        <div>
-            <h1> Blogs</h1>
+        <div className='main-body'>
+            <div className='heading'>
+                <h1>Blogs</h1>
+            </div>
             {data.Blogs
             ?
-            data.Blogs.map((d, i) => (
+            data.Blogs.slice(0, next).map((d, i) => (
                 i % 3 === 0
                 ?
                 <div key={`${d.title}-${i}`} className="row1">
-                    <div className='card-container'>
-                        <div className='image-container'>
-                            <img src={d.imageUrl} alt='' width='750' height='400'/>
-                        </div>
+                    <img src={d.imageUrl} alt=''/>
                         <div className='card-content'>
                             <div className='card-title'>
                                 <h2>{d.title}</h2>
                             </div>
                             <div className='card-body'>
                                 <p>
-                                    {d.body.slice(0, 200)}...
+                                    {d.body.slice(0, 375)}...
                                     <a href='' className='readMoreBtn'>Read More</a>
                                 </p>
                             </div>
                         </div>
-                    </div>
                 </div>
                 :
-                <div className='row2' >
+                <>
                     {i % 3 === 1
                     ?
-                    <div key={`${d.title}-${i}`} className="left2">
-                        <div className='card-container'>
-                            <div className='image-container'>
-                                <img src={d.imageUrl} alt='' width='500' />
-                            </div>
+                    <div key={`${d.title}-${i}`} className="left" display="inline-block">
+                        <img src={d.imageUrl} alt=''/>
                             <div className='card-content'>
                                 <div className='card-title'>
-                                    <h2>{d.title.slice(0, 50)}...</h2>
+                                    <h2>{d.title.slice(0, 48)}...</h2>
                                 </div>
                                 <div className='card-body'>
                                     <p>
-                                        {d.body.slice(0, 80)}...
+                                        {d.body.slice(0, 160)}...
                                         <a href='' className='readMoreBtn'>Read More</a>
                                     </p>
                                 </div>
                             </div>
-                        </div>
                     </div>
                     :
-                    <div key={`${d.title}-${i}`} className="row1">
-                    <div className='card-container'>
-                        <div className='image-container'>
-                            <img src={d.imageUrl} alt='' width='500'/>
-                        </div>
+                    <div key={`${d.title}-${i}`} className="right" display="inline-block">
+                        <img src={d.imageUrl} alt=''/>
                         <div className='card-content'>
                             <div className='card-title'>
-                                <h2>{d.title.slice(0, 50)}...</h2>
+                                <h2>{d.title.slice(0, 48)}...</h2>
                             </div>
                             <div className='card-body'>
                                 <p>
-                                    {d.body.slice(0, 80)}...
+                                    {d.body.slice(0, 160)}...
                                     <a href='' className='readMoreBtn'>Read More</a>
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
+                    
                 }
-                </div>
+                </>
             ))
             :
             'loading'}
-            <div className='moreButton'>
-                <a href='' className=''>More...</a>
+            <div className='toggleBtn'>
+                {next>=data.Blogs.length?(<button type="button" onClick={showLess} className="btn">Less...</button>):next < data.Blogs.length && (<button type="button" onClick={showMore} className="btn">More...</button>)}
             </div>
         </div>
     )
