@@ -23,6 +23,7 @@ function App() {
   return (
 
     <div className="App">
+      <Button type="primary">Button</Button>
       <>
         <Navbar bg="dark" variant="dark"  className="Navbar">
           <Container >

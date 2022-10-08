@@ -3,6 +3,7 @@ import data from '../data/data.json';
 import { useState } from "react";
 import './Blogs.css'
 
+
 const Blogs = () => {
 
     const [next, setNext] = useState(4);
@@ -34,7 +35,7 @@ const Blogs = () => {
                             </div>
                             <div className='card-body'>
                                 <p>
-                                    {d.body.slice(0, 250)}...
+                                    {d.body.slice(0, 190)}...
                                     <a href='' className='readMoreBtn'>Read More</a>
                                 </p>
                             </div>
@@ -48,11 +49,11 @@ const Blogs = () => {
                         <img src={d.imageUrl} alt=''/>
                             <div className='card-content'>
                                 <div className='card-title'>
-                                    <h2>{d.title.slice(0, 35)}...</h2>
+                                    <h2>{d.title.slice(0, 30)}...</h2>
                                 </div>
                                 <div className='card-body'>
                                     <p>
-                                        {d.body.slice(0, 100)}...
+                                        {d.body.slice(0, 80)}...
                                         <a href='' className='readMoreBtn'>Read More</a>
                                     </p>
                                 </div>
@@ -63,11 +64,11 @@ const Blogs = () => {
                         <img src={d.imageUrl} alt=''/>
                         <div className='card-content'>
                             <div className='card-title'>
-                                <h2>{d.title.slice(0, 35)}...</h2>
+                                <h2>{d.title.slice(0, 30)}...</h2>
                             </div>
                             <div className='card-body'>
                                 <p>
-                                    {d.body.slice(0, 100)}...
+                                    {d.body.slice(0, 80)}...
                                     <a href='' className='readMoreBtn'>Read More</a>
                                 </p>
                             </div>
@@ -80,7 +81,7 @@ const Blogs = () => {
             :
             'loading'}
             <div className='toggleBtn'>
-                {next>=data.Blogs.length?(<button type="button" onClick={showLess} className="btn">Less...</button>):next < data.Blogs.length && (<button type="button" onClick={showMore} className="btn">More...</button>)}
+                {next>=data.Blogs.length?(<a onClick={showLess} className="btn">Less...</a>):next < data.Blogs.length && (<a onClick={showMore} className="btn">More...</a>)}
             </div>
         </div>
     )

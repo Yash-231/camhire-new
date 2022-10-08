@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
 .main-body {
     width: 100%;
     height: 100vw;
@@ -8,16 +10,16 @@
 .heading{
 align-self: center;
 position: relative;
-padding-top: 50px;
-padding-bottom: 50px;
+padding-top: 35px;
+padding-bottom: 35px;
 }
 
 .heading h1 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 30px;
+    /* line-height: 60px; */
     /* identical to box height */
     color: #FFFFFF;
 }
@@ -207,35 +209,32 @@ text-align: left;
     color: #FFFFFF;
     text-align: left;
     }
-    
-.toggleBtn{
-    box-sizing: border-box;
-    position:relative;
-    top:43%;
-    left: 43%;
-    width: 220px;
-    height: 76px;
+
+.toggleBtn a{
+    position: absolute;
+    display: flex;
+    width: 7%;
+    margin-top: 43%;
+    align-content:space-around;
+    margin-left: 32%;
     border: 2px solid #FFFFFF;
     border-radius: 20px;
-    align-self: center;
-}
-
-.btn{
-    position: absolute;
-    top:34%;
-    left: 34%;
-    align-self: center;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: 30px;
-line-height: 45px;
-/* identical to box height */
-
-
+font-size: 25px;
+line-height: 35px;
 background: linear-gradient(91.89deg, #C526D2 1.09%, #6D4AE1 89.64%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
 /* text-fill-color: transparent; */
+}
+
+.row1 a, .left a, .right a, .row1 a:hover, .left a:hover, .right a:hover{
+    color: #FFFFFF;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+text-decoration: none;
 }
