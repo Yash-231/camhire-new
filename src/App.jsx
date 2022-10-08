@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import header from "./components/header"
-import camHireImage from './components/img/CAMHIRE.png';
+import camHireImage from './components/img/camhire_logo.png';
 
 import { Nav, Container, Navbar } from "react-bootstrap";
 

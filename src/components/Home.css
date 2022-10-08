@@ -1,18 +1,35 @@
+.Home-container{
+  /* background-color: rgba(0, 0, 0, 1); */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(18, 19, 22, 1));
+}
 .wrapper {
   max-width: 1020px;
   width: 100%;
   padding: 1em;
   margin: auto;
+ 
 }
 
 .join-us {
   display: flex;
   flex-direction: row-reverse;
-  width: 75%;
+  width: 77%;
   margin: 1.5em auto;
-  /* background-color:  blue; */
-  /* border: 1px solid rgba(255, 255, 255, 1); */
-  /* border-radius: 10px; */
+ font-size: 16px;
+
+}
+.join-us-button{
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: 
+  rgba(217, 217, 217, 0);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  width: 90px;
+  height: 30px;
+  font-weight: 400;
+  font-family: Inter;
+  font-style: normal;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .header {
   display: flex;
@@ -29,10 +46,15 @@
 .header__right {
   width: 100%;
   padding: 0.8em;
+  float: left;
 }
 
 .header__left {
   max-width: 550px;
+  color:  rgba(255, 255, 255, 1);
+  font-weight: 700;
+  /* font-family: poppins;
+  font-style: bold; */
 }
 
 .header__right {
@@ -46,32 +68,39 @@
 }
 
 .learn-more__button {
-  height: 2.5em;
-  width: 7.5em;
-  margin-top: 0.5em;
-  /* background-color: blue; */
+  height: 3.0em;
+  width: 9em;
+  margin-top: 3.5em;
   background-image: linear-gradient(to right, rgba(197, 38, 210, 1), rgba(166, 50, 215, 1), rgba(109, 74, 225, 1));
   color: white;
   border-radius: 5px;
   border: 0;
+  font-weight: 700;
+  font-family: poppins;
+  font-size: 15px;
+  border-radius: 12px;
 }
 
 .video__container {
   width: 307px;
   height: 386px;
+
 }
 
 .video__player {
   width: 100%;
   height: 100%;
 }
-
+.features__heading{
+  color: rgba(255, 255, 255, 1);
+}
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1060px;
   margin: auto;
+  color: rgba(255, 255, 255, 1);
 }
 
 .feature {
@@ -80,8 +109,25 @@
   max-width: 320px;
   width: 100%;
   text-align: left;
+  color: 
+  rgba(255, 255, 255, 1);
 }
-
+.features p{
+  font-family: poppins;
+  margin-top: 2em;
+  font-size: 16px;
+  font-weight: bold;
+  /* margin-left: 1em; */
+  text-align: center;
+}
+.feature h4{
+  font-family: poppins;
+  font-weight: bold;
+  text-align: center;
+}
+.about-us__heading{
+  color: rgba(255, 255, 255, 1);
+}
 .about-us {
   display: flex;
   /* flex-direction: column; */
@@ -90,6 +136,8 @@
   width: 100%;
   margin: auto;
   padding: 1em;
+   
+  
 }
 
 .about-us__para,
@@ -100,6 +148,10 @@
 .about-us__para {
   width: 50%;
   text-align: left;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-family: poppins;
+  font-style: normal;
 }
 
 .about-us__image {
@@ -110,5 +162,8 @@
   height: auto;
   width: auto;
 }
-
-
+.img{
+  margin-top: -400px;
+  margin-left: 20px;
+}
+background-image:url( ../images/Ellipse1.png)

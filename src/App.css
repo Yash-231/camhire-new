@@ -1,6 +1,13 @@
 .App {
   text-align: center;
- 
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(18, 19, 22, 1));
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .App-logo {
@@ -14,7 +21,7 @@
   }
 }
 
-/* .App-header {
+.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -23,7 +30,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-} */
+}
 
 .App-link {
   color: #61dafb;
@@ -45,7 +52,7 @@
 .Navbar{
   margin-top: 20px;
    background-image:linear-gradient(to right, rgba(72, 85, 99, 1) ,rgba(41, 50, 60, 1));
-  background-image:linear-gradient(to center, rgba(72, 85, 99, 1) ,rgba(41, 50, 60, 1));
+
 }
 .Navbar a:hover{
   border-bottom: 1px solid black;
