@@ -19,17 +19,19 @@
 
 }
 .join-us-button{
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1.5px solid rgba(255, 255, 255, 1);
   background-color: 
   rgba(217, 217, 217, 0);
   color: rgba(255, 255, 255, 1);
-  border-radius: 10px;
+  border-radius: 8px;
   width: 90px;
   height: 30px;
-  font-weight: 400;
+  font-size: 17px;
+  line-height: 21.78px;
+  font-weight: 300;
   font-family: Inter;
   font-style: normal;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.25));
 }
 .header {
   display: flex;
@@ -59,8 +61,19 @@
 
 .header__right {
   max-width: fit-content;
+  background-image:  conic-gradient( rgba(197, 38, 210, 1),
+  rgba(38, 45, 210, 1),rgba(38, 210, 138, 1), rgba(38, 148, 210, 0.81),rgba(38, 55, 210, 1));
+  border-radius: 50%;
+  /* border-bottom-left-radius: 20%; */
+  /* background-size: 800px 400px 400px 400px 400px;
+  background-position: left; */
 }
-
+.header__h3{
+  color: rgba(255, 255, 255, 1);
+}
+.header__h4{
+  color: rgba(255, 255, 255, 1);
+}
 .cam__text {
   color: blue;
   /* color: rgba(197, 38, 210, 1); */
@@ -84,15 +97,19 @@
 .video__container {
   width: 307px;
   height: 386px;
-
 }
 
 .video__player {
   width: 100%;
   height: 100%;
+ 
 }
+
 .features__heading{
   color: rgba(255, 255, 255, 1);
+  font-size: 32px;
+  font-weight: 700;
+  font-family: poppins;
 }
 .features {
   display: flex;
@@ -101,21 +118,24 @@
   max-width: 1060px;
   margin: auto;
   color: rgba(255, 255, 255, 1);
+  background-image: url("../images/pngwing.png"), url("../images/pngwing3.png"),url("../images/pngwing2.png") ;
+  background-size: 400px 420px;
+  background-repeat: no-repeat;
+  background-position: center top, -20px top, 710px top;
 }
-
 .feature {
   padding: 1em;
   margin: 1em;
   max-width: 320px;
   width: 100%;
   text-align: left;
-  color: 
-  rgba(255, 255, 255, 1);
+  color:  rgba(255, 255, 255, 1);
+
 }
 .features p{
   font-family: poppins;
-  margin-top: 2em;
-  font-size: 16px;
+  margin-top: 3em;
+  font-size: 15px;
   font-weight: bold;
   /* margin-left: 1em; */
   text-align: center;
@@ -124,9 +144,12 @@
   font-family: poppins;
   font-weight: bold;
   text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 22px;
+  
 }
 .about-us__heading{
-  color: rgba(255, 255, 255, 1);
+  font-size: 300px;
 }
 .about-us {
   display: flex;
@@ -136,9 +159,7 @@
   width: 100%;
   margin: auto;
   padding: 1em;
-   
-  
-}
+  }
 
 .about-us__para,
 .about-us__image {
@@ -162,8 +183,8 @@
   height: auto;
   width: auto;
 }
-.img{
-  margin-top: -400px;
-  margin-left: 20px;
+.about{
+  color: rgba(255, 255, 255, 1);
 }
-background-image:url( ../images/Ellipse1.png)
+
+

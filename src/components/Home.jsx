@@ -1,23 +1,16 @@
 import React from "react";
+import icon1 from "../images/icon1.png"
 // import mainLogo from "../images/camhire_logo.png";
 import shortVid from "../video/CamHire_vid.mp4";
 import data from "../data/data.json";
 import about_photo from "../images/landing_page.jpg";
 import "./Home.css";
-//import pngwing from "../images/pngwing.png"
-// import ellipse1 from "../images/Ellipse1.png"
-// import ellipse2 from "../images/Ellipse2.png"
-// import ellipse3 from "../images/Ellipse3.png"
-// import ellipse4 from "../images/Ellipse4.png"
-// import ellipse5 from "../images/Ellipse5.png"
-// import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-
 const Home = () => {
   return (
     <div className="Home-container">
       <div classname="wrapper">
     <div className="join-us">
-      <button className="join-us-button">Join us</button>
+      <button className="join-us-button">Join Us</button>
     </div>
     <div className="header">
       <div className="header__left">
@@ -36,11 +29,14 @@ const Home = () => {
           <video autoPlay loop muted className="video__player">
             <source src={shortVid} type="video/mp4" />
           </video>
-        </div>
+            </div>
       </div>
         </div>
     <div className="features__container">
-      <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
+          <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
+          <div>
+          <img src={icon1} style={{ width: "60px", height: "60px" }}alt="/"/>
+          </div>
       <div className="features">
         {data.Features
           ? data.Features.map((d, i) => (
@@ -51,9 +47,10 @@ const Home = () => {
               </div>
             ))
           : "Loading"}
-      </div>
+          </div>
+         
     </div>
-    <h1 classname="about-us__heading">ABOUT US</h1>
+    <div className="about"><h1 classname="about-us__heading">ABOUT US</h1></div>
     <div className="about-us">
       <p className="about-us__para">{data.About.paragraph}</p>
       <div className="about-us__image">
