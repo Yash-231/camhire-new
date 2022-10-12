@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Photographers = () => {
+const Photographers = (props) => {
     return (
         <div>
             <p>photographers</p>

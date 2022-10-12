@@ -1,0 +1,48 @@
+
+
+.left_quote h3{
+    
+    font-size: 25px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+}
+.header-left_quote{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.Endless {
+    height: 270px;
+    width: 707px;
+    left: 3.5px;
+    top: 10px;
+    border-radius: nullpx;
+
+}
+
+ .we{
+    height: 117px;
+    width: 630px;
+    left: 10px;
+    top: 10px;
+    border-radius: nullpx;
+    }
+.we h2{
+    height: 117px;
+width: 630px;
+left: 10px;
+top: 10px;
+border-radius: nullpx;
+
+} 
+ .right{
+height: 686px;
+width: 607px;
+
+border-radius: 20px;
+flex-direction: column;
+}

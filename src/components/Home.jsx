@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import mainLogo from '../images/camhire_logo.png';
 import shortVid from '../video/CamHire_vid.mp4';
 import data from '../data/data.json';
 import about_photo from '../images/landing_page.jpg';
+import Pagination from './Pagination';
+
+
+import "./Home.css";
 import {
     BrowserRouter,
     Link,
     Routes,
     Route,
 } from "react-router-dom";
+import Blogs from './Blogs';
 
+console.log(data.Photographers);
 const Home = () => {
+
+    const [showing, setIsShowing] = useState(true);
+    const [photographerIndex, setPhotographerIndex] = useState(-1);
+    const [productDataList, setProductDataList] = useState([]);
+    const resetStatus = () => {
+        setIsShowing(true);
+        setPhotographerIndex(-1)
+    }
+    const onChangePage = (pageOfItems) => {
+        setProductDataList(pageOfItems)
+    }
+
     return (
         <div classname="wrapper">
             <div classname='header'>
@@ -64,25 +82,43 @@ const Home = () => {
                 </div>
                 <div className='about_image' >
 
-                    <img src={about_photo} alt="/" />
+                    <img src={about_photo} style={{ height: '250px' }} alt="/" />
                 </div>
             </div>
+            
             <div className='photographers' >
                 <h1>Our Photographers</h1>
-                <div className='photograpger_images' >
+                <>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
+                            <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12">
+                                
 
-                </div>
+                                <Pagination className="pg-style"
+                                    pageSize={3}
+                                    items={data.Photographers.data}
+                                    onChangePage={onChangePage}
+                                />
+                            </div>
+                            <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
+
+                        </div>
+                    </div>
+                </>
             </div>
             <div className='blogs' >
                 <h1> Blogs</h1>
-                <div className='row1' ></div>
+
+
+                {/* <div className='row1' ></div>
                 <div className='row2' >
                     <div className='left2'></div>
                     <div className='right2'></div>
                 </div>
                 <div className='row3'>
 
-                </div>
+                </div> */}
 
             </div>
             <div className='gallery'>
@@ -90,10 +126,11 @@ const Home = () => {
 
             </div>
             <div className='contact'>
-                <div className='contact_left'>
+
+                {/* <div className='contact_left'>
                     <h1>Contact Us</h1>
                 </div>
-                <div className='contact right'></div>
+                <div className='contact right'></div> */}
             </div>
         </div>
 
