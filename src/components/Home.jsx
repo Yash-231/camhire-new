@@ -4,7 +4,7 @@ import shortVid from '../video/CamHire_vid.mp4';
 import data from '../data/data.json';
 import about_photo from '../images/landing_page.jpg';
 import Pagination from './Pagination';
-
+import Card from './Card';
 
 import "./Home.css";
 import {
@@ -85,27 +85,73 @@ const Home = () => {
                     <img src={about_photo} style={{ height: '250px' }} alt="/" />
                 </div>
             </div>
-            
+
             <div className='photographers' >
                 <h1>Our Photographers</h1>
+                
                 <>
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
-                            <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12">
-                                
+                    {showing && photographerIndex === -1 ?
+                        <div id='photographers' className='text-center'>
+                            <div className='container'>
+                                <div className='section-title'>
+                                    <h2 data-aos="fade-up" data-aos-duration="1000">Our Photographers</h2>
+                                    <p data-aos="fade-up" data-aos-duration="1000">
+                                        Camhire has a team of diverse talents from across the nation who are perfect for
+                                        capturing memories and etching them in your hearts.
+                                    </p>
+                                </div>
+                                <div className='row'>
+                                    <div className="portfolio-item cursor">
 
-                                <Pagination className="pg-style"
-                                    pageSize={3}
-                                    items={data.Photographers.data}
-                                    onChangePage={onChangePage}
-                                />
+
+                                        {productDataList//onClick={(i) => expandPhotographer(d.index)}
+                                            ? productDataList.map((d, i) => (
+                                                <div key={`${d.title}-${i}`} className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-6" data-aos='fade-up' data-aos-duration='1000'>
+                                                    <Card
+                                                        title={d.title}
+                                                        imageUrl={d.imageUrl}
+                                                        body={d.body}
+                                                        codeword={d.codeword}
+                                                        setIsPhotographerPosition={setPhotographerIndex}
+                                                        index={d.index}
+                                                        setIsShowData={setIsShowing}
+
+                                                    />
+                                                </div>
+                                            ))
+                                            : 'loading'}</div>
+                                </div>
                             </div>
-                            <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
 
-                        </div>
-                    </div>
+
+
+                            {
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
+                                        <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12">
+
+                                            <Pagination className="pg-style"
+                                                pageSize={3}
+                                                items={data.Photographers}
+                                                onChangePage={onChangePage}
+                                            />
+                                        </div>
+                                        <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
+
+                                    </div>
+                                </div>}
+
+
+                            
+
+                        </div> : <>
+
+                            
+                        </>
+                    }
                 </>
+                
             </div>
             <div className='blogs' >
                 <h1> Blogs</h1>
