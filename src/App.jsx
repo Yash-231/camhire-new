@@ -9,9 +9,7 @@ import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import header from "./components/header"
 import camHireImage from './components/img/CAMHIRE.png';
-import { Button } from 'antd';
 import { Nav, Container, Navbar } from "react-bootstrap";
-
 import { render } from "react-dom";
 import {
   BrowserRouter,
@@ -24,7 +22,6 @@ function App() {
   return (
 
     <div className="App">
-      <Button type="primary">Button</Button>
       <>
         <Navbar bg="dark" variant="dark"  className="Navbar">
           <Container >
