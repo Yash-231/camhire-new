@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <>
-        <Navbar expand="lg" sticky="top" bg="dark" variant="dark"  className="Navbar">
+        <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="Navbar">
           <Container >
           {/* <img src={camHireImage} style={{ width: "60%", height: "80%" }} alt="Camhire"/> */}
           <Navbar.Brand href="/Home" style={{ fontSize: "2.5rem", fontWeight: 5 }}><b style={{ fontWeight: 700 }}>CAM</b>HIRE</Navbar.Brand>

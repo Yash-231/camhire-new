@@ -60,6 +60,10 @@ html {
   margin: 0 8%;
 }
 
+.navbar-toggler {
+  margin: 0 8%;
+}
+
 #responsive-navbar-nav {
   position: relative;
 }
@@ -83,5 +87,40 @@ html {
   html, body{
     overflow-x: hidden;
     width: 100vw;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .Navbar {
+    padding: 0 !important;
+    position: sticky !important;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+  .navbar-toggler:active {
+    outline: 3px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  .container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100% !important;
+    justify-content: space-around !important;
+  }
+  .me-auto {
+    position: relative;
+    right: auto;
+    width: 100%;
+  }
+  .me-auto a {
+    text-align: left;
+    padding: 2% 21%;
+  }
+  .me-auto a {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .me-auto a:active {
+    background-color: #121316;
   }
 }
