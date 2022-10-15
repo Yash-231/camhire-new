@@ -114,8 +114,7 @@ html {
     width: 100%;
   }
   .me-auto a {
-    text-align: left;
-    padding: 2% 21%;
+    padding: 2%;
   }
   .me-auto a {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
