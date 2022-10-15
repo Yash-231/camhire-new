@@ -71,10 +71,9 @@ const Blogs = () => {
             </Row>
             <div className='toggleBtn'>
                 {next >= data.Blogs.length ?
-                (<a onClick={showLess} className="btn">Less...</a>)
+                <a onClick={showLess} className="btn">Less...</a>
                 :
-                next < data.Blogs.length && 
-                (<a onClick={showMore} className="btn">More...</a>)}
+                <a onClick={showMore} className="btn">More...</a>}
             </div>
         </div>
     )
