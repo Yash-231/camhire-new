@@ -7,7 +7,6 @@
   width: 100%;
   padding: 1em;
   margin: auto;
- 
 }
 
 .join-us {
@@ -27,10 +26,10 @@
   width: 90px;
   height: 30px;
   font-size: 17px;
-  line-height: 21.78px;
+  line-height: 23.78px;
   font-weight: 300;
   font-family: Inter;
-  font-style: normal;
+ letter-spacing: 0.4px;
   filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.25));
 }
 .header {
@@ -61,9 +60,10 @@
 
 .header__right {
   max-width: fit-content;
-  background-image:  conic-gradient( rgba(197, 38, 210, 1),
-  rgba(38, 45, 210, 1),rgba(38, 210, 138, 1), rgba(38, 148, 210, 0.81),rgba(38, 55, 210, 1));
-  border-radius: 50%;
+  background-image:  radial-gradient( rgba(197, 38, 210, 1) ,
+  rgba(38, 45, 210, 1) ,rgba(38, 210, 138, 1) , rgba(38, 148, 210, 0.81),rgba(38, 55, 210, 1));
+  /* box-shadow: 15px 15px 15px 15px rgba(197, 38, 210, 1), -12px 10px 8px 10px  rgba(38, 45, 210, 1),12px 10px 5px 30px rgba(38, 210, 138, 1), 5px 10px 8px 10px  rgba(38, 148, 210, 0.81), 15px 10px 8px 10px rgba(38, 55, 210, 1); */
+  /* border-radius: 50%; */
   /* border-bottom-left-radius: 20%; */
   /* background-size: 800px 400px 400px 400px 400px;
   background-position: left; */
@@ -92,6 +92,8 @@
   font-family: poppins;
   font-size: 15px;
   border-radius: 12px;
+  line-height: 42px;
+  letter-spacing: 0.5px;
 }
 
 .video__container {
@@ -150,6 +152,7 @@
 }
 .about-us__heading{
   font-size: 300px;
+  color: rgba(255, 255, 255, 1);
 }
 .about-us {
   display: flex;
@@ -183,8 +186,11 @@
   height: auto;
   width: auto;
 }
-.about{
+.about h1{
   color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  font-family: poppins;
+  font-size: 40px;
 }
 
 

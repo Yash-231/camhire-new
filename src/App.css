@@ -48,14 +48,13 @@
 }
 .me-auto{
   margin-left: 400px;
-
- 
-}
+ }
 .Navbar{
   margin-top: 20px;
    background-image:linear-gradient(to right, rgba(72, 85, 99, 1) ,rgba(41, 50, 60, 1));
-
 }
 .Navbar a:hover{
   border-bottom: 1px solid black;
+  border-left-width: 1px;
+  
 }

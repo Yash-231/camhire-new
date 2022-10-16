@@ -30,8 +30,9 @@ const Home = () => {
             <source src={shortVid} type="video/mp4" />
           </video>
             </div>
-      </div>
+          </div>
         </div>
+      <div className="back"></div>
     <div className="features__container">
           <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
           <div>
@@ -50,7 +51,7 @@ const Home = () => {
           </div>
          
     </div>
-    <div className="about"><h1 classname="about-us__heading">ABOUT US</h1></div>
+    <div className="about"><h1 classname="features__heading">ABOUT US</h1></div>
     <div className="about-us">
       <p className="about-us__para">{data.About.paragraph}</p>
       <div className="about-us__image">
