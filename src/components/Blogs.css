@@ -1,240 +1,105 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-.main-body {
-    width: 100%;
-    height: 100vw;
-    background: #121316;
-    padding: 0 15% 0 15%;
-}
-
-.heading{
-align-self: center;
-position: relative;
-padding-top: 35px;
-padding-bottom: 35px;
-}
-
-.heading h1 {
+.heading {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    /* line-height: 60px; */
-    /* identical to box height */
+    font-size: 1.75rem;
     color: #FFFFFF;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.row1{
-    position: relative;
-    width: 80%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+.ant-col a {
+    text-decoration: none;
 }
 
-.row1 img{
-    display: flex;
-    width: 100%;
-    height: 100%;
+[class*="ant-card-hoverable"] {
+    width: 58.33%;
 }
 
-.row1 .card-content{
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.84);
-    padding-left: 15px;
-    padding-right: 15px;
+.ant-card-cover img {
+    height: 20vw;
 }
 
-.row1 .card-content .card-title{
-    position: relative;
-width: 100%;
-height: 50%;
-padding-top: auto;
-padding-bottom: auto;
+.ant-card-body {
+    padding: 0;
 }
 
-.row1 .card-content .card-title h2{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 50px;
-/* identical to box height */
-text-align: left;
-color: #FFFFFF;
+.ant-card-meta {
+    height: auto;
+    background: #000000;
+    color: #fff;
 }
 
-.row1 .card-content .card-body{
-    position: relative;
-    width: 100%;
-    height: 50%;
-    padding-top: auto;
-    padding-bottom: auto;
-    padding-right: 5px;
+.ant-card-meta-detail {
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
-.row1 .card-content .card-body p{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-/* line-height: 27px; */
-color: #FFFFFF;
-text-align: left;
+.ant-card-meta-detail>div:not(:last-child) {
+    margin-bottom: 0px;
 }
 
-.left {
-position: relative;
-display: inline;
-float: left;
-width: 39.5%;
-height: 300px;
-margin-top: 115px;
-margin-bottom: 115px;
-margin-left: 10%;
-/* margin-right: 1%; */
-}
-
-.left img{
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.left .card-content{
-position: relative;
-width: 100%;
-height: 100px;
-background: rgba(0, 0, 0, 0.84);
-padding-left: 15px;
-padding-right: 15px;
-}
-
-.left .card-content .card-title{
-position: relative;
-width: 100%;
-height: 50%;
-padding-top: auto;
-padding-bottom: auto;
-}
-
-.left .card-content .card-title h2{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 50px;
-color: #FFFFFF;
-text-align: left;
-}
-
-.left .card-content .card-body{
-position: relative;
-    width: 100%;
-    height: 50%;
-    padding-top: auto;
-    padding-bottom: auto;
-}
-
-.left .card-content .card-body p{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-/* line-height: 27px; */
-color: #FFFFFF;
-text-align: left;
-}
-
-.right {
-    position: relative;
-    display: inline;
-    float: right;
-    width: 39.5%;
-    height: 300px;
-    margin-top: 115px;
-    margin-bottom: 115px;
-    margin-right: 10%;
-    }
-    
-    .right img{
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .right .card-content{
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.84);
-    padding-left: 15px;
-    padding-right: 15px;
-    }
-    
-    .right .card-content .card-title{
-    position: relative;
-    width: 100%;
-    height: 50%;
-    padding-top: auto;
-    padding-bottom: auto;
-    }
-    
-    .right .card-content .card-title h2{
+.ant-card-meta-title {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 50px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
     color: #FFFFFF;
+    margin-top: 1.3%;
     text-align: left;
-    }
-    
-    .right .card-content .card-body{
-    position: relative;
-        width: 100%;
-        height: 50%;
-        padding-top: auto;
-        padding-bottom: auto;
-    }
-    
-    .right .card-content .card-body p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ant-card-meta-description {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
-    /* line-height: 27px; */
     color: #FFFFFF;
     text-align: left;
-    }
-
-.toggleBtn a{
-    position: absolute;
-    display: flex;
-    width: 7%;
-    margin-top: 43%;
-    align-content:space-around;
-    margin-left: 32%;
-    border: 2px solid #FFFFFF;
-    border-radius: 20px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 25px;
-line-height: 35px;
-background: linear-gradient(91.89deg, #C526D2 1.09%, #6D4AE1 89.64%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-/* text-fill-color: transparent; */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
-.row1 a, .left a, .right a, .row1 a:hover, .left a:hover, .right a:hover{
-    color: #FFFFFF;
+.toggleBtn a,
+.toggleBtn a:hover {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
     font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-text-decoration: none;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 130%;
+    padding: 0.4% 2% 0.4% 2%;
+    background: linear-gradient(91.89deg, #C526D2 1.09%, #6D4AE1 89.64%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media only screen and (max-width: 768px) {
+    .ant-card-cover img {
+        height: 40vw;
+    }
+
+    [class*="ant-card-hoverable"]:not([class*="ant-col-push-5"] a [class*="ant-card-hoverable"]) {
+        margin: auto;
+    }
+
+    [class*="ant-col-push-5"] {
+        margin-left: -16.8%;
+    }
+
+    [class*="ant-card-hoverable"] {
+        width: 75%;
+    }
 }

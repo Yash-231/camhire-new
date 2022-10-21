@@ -1,15 +1,20 @@
 @import '~antd/dist/antd.css';
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+#root{
+  background: #121316;
+  color: #FFFFFF;
+}
+
+html {
+  background: #121316;
+  font-family: 'Poppins';
+  font-style: normal;
+  padding-top: 2%;
+}
 
 .App {
   text-align: center;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(18, 19, 22, 1));
-}
-
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .container {
-    flex-direction: column;
-  }
 }
 
 .App-logo {
@@ -23,7 +28,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -32,7 +37,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -46,15 +51,75 @@
     transform: rotate(360deg);
   }
 }
-.me-auto{
-  margin-left: 400px;
- }
-.Navbar{
-  margin-top: 20px;
-   background-image:linear-gradient(to right, rgba(72, 85, 99, 1) ,rgba(41, 50, 60, 1));
+
+.container {
+  margin: 0 auto;
 }
-.Navbar a:hover{
-  border-bottom: 1px solid black;
-  border-left-width: 1px;
-  
+
+.navbar-brand {
+  margin: 0 8%;
+}
+
+.navbar-toggler {
+  margin: 0 8%;
+}
+
+#responsive-navbar-nav {
+  position: relative;
+}
+
+.me-auto{
+  position: absolute;
+  right: 8%;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.me-auto a:hover {
+  color: #FFFFFF;
+}
+
+.Navbar{
+  background:linear-gradient(90deg, #29323C, #485563);
+}
+
+@media screen and (max-width: 768px){
+  html, body{
+    overflow-x: hidden;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .Navbar {
+    padding: 0 !important;
+    position: sticky !important;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+  .navbar-toggler:active {
+    outline: 3px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  .container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100% !important;
+    justify-content: space-around !important;
+  }
+  .me-auto {
+    position: relative;
+    right: auto;
+    width: 100%;
+  }
+  .me-auto a {
+    padding: 2%;
+  }
+  .me-auto a {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .me-auto a:active {
+    background-color: #121316;
+  }
 }

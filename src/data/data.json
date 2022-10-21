@@ -224,23 +224,22 @@
         "youtube": "youtube.com"
     },
     "Features": [{
-            "icon": "fa fa-camera",
+            "icon": "fa-light fa-circle-dollar",
             "title": "Third-Party And Legality Services  ",
-            
             "text": "We offer you the best third-party services by assuring zero fraud and 100% satisfactory deals. \n"
         },
         {
-            "icon": "fa fa-camera",
+            "icon": "fa-solid fa-mug-hot",
             "title": " Onboarding Genuine Photographers ",
             "text": "We bring to you genuine and vetted photographers who are experts in the services they offer.."
         },
         {
-            "icon": "fa fa-camera",
+            "icon": "fa-solid fa-mug-hot",
             "title": " Know Your Photographers Inside Out",
             "text": "Know every single detail about your photographer before you freeze them."
         },
         {
-            "icon": "fa fa-camera",
+            "icon": "fa-solid fa-mug-hot",
             "title": "Book Photographers From Anywhere In India ",
             "text": " From Kashmir to Kanyakumari, you get the benefit of booking photographers from any corner of India."
         }

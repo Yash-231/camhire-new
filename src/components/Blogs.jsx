@@ -2,6 +2,8 @@ import React from 'react';
 import data from '../data/data.json';
 import { useState } from "react";
 import './Blogs.css'
+import { Card, Col, Row, Space } from 'antd';
+const { Meta } = Card;
 
 
 const Blogs = () => {
@@ -19,69 +21,59 @@ const Blogs = () => {
 
     return (
         <div className='main-body'>
-            <div className='heading'>
-                <h1>Blogs</h1>
-            </div>
-            {data.Blogs
-            ?
-            data.Blogs.slice(0, next).map((d, i) => (
-                i % 3 === 0
-                ?
-                <div key={`${d.title}-${i}`} className="row1">
-                    <img src={d.imageUrl} alt=''/>
-                        <div className='card-content'>
-                            <div className='card-title'>
-                                <h2>{d.title}</h2>
-                            </div>
-                            <div className='card-body'>
-                                <p>
-                                    {d.body.slice(0, 190)}...
-                                    <a href='' className='readMoreBtn'>Read More</a>
-                                </p>
-                            </div>
-                        </div>
-                </div>
-                :
-                <>
-                    {i % 3 === 1
+                <h1 className='heading'>Blogs</h1>
+            <Row gutter={[0, { xs: 8, sm: 16, md: 12, lg: 12 }]} justify="center">
+                {data.Blogs
                     ?
-                    <div key={`${d.title}-${i}`} className="left" display="inline-block">
-                        <img src={d.imageUrl} alt=''/>
-                            <div className='card-content'>
-                                <div className='card-title'>
-                                    <h2>{d.title.slice(0, 30)}...</h2>
-                                </div>
-                                <div className='card-body'>
-                                    <p>
-                                        {d.body.slice(0, 80)}...
-                                        <a href='' className='readMoreBtn'>Read More</a>
-                                    </p>
-                                </div>
-                            </div>
-                    </div>
+                    data.Blogs.slice(0, next).map((d, i) => (
+                        i % 3 == 0 ?
+                        <Col span={24} className="gutter-row">
+                            <a href="#">
+                                <Card
+                                    bordered={false}
+                                    hoverable
+                                    style={{ margin:"auto" }}
+                                    cover={<img alt="blog-img" src={d.imageUrl}/>}
+                                >
+                                    <Meta title={d.title} description={d.body}/>
+                                </Card>
+                                </a>
+                        </Col>
+                        :
+                        i % 3 == 1 ?
+                        <Col md={{span:12}} sm={{span: 24}} push={5} className="gutter-row">
+                            <a href="#">
+                            <Card
+                                bordered={false}
+                                hoverable
+                                cover={<img alt="blog-img" src={d.imageUrl}/>}
+                            >
+                                <Meta title={d.title} description={d.body}/>
+                            </Card>
+                            </a>
+                        </Col>
+                        :
+                        <Col md={{span:12}} sm={{span: 24}} className="gutter-row">
+                            <a href="#">
+                            <Card
+                                bordered={false}
+                                hoverable
+                                cover={<img alt="blog-img" src={d.imageUrl}/>}
+                            >
+                                <Meta title={d.title} description={d.body}/>
+                            </Card>
+                            </a>
+                        </Col>
+                    ))
                     :
-                    <div key={`${d.title}-${i}`} className="right" display="inline-block">
-                        <img src={d.imageUrl} alt=''/>
-                        <div className='card-content'>
-                            <div className='card-title'>
-                                <h2>{d.title.slice(0, 30)}...</h2>
-                            </div>
-                            <div className='card-body'>
-                                <p>
-                                    {d.body.slice(0, 80)}...
-                                    <a href='' className='readMoreBtn'>Read More</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    'loading'
                 }
-                </>
-            ))
-            :
-            'loading'}
+            </Row>
             <div className='toggleBtn'>
-                {next>=data.Blogs.length?(<a onClick={showLess} className="btn">Less...</a>):next < data.Blogs.length && (<a onClick={showMore} className="btn">More...</a>)}
+                {next >= data.Blogs.length ?
+                <a onClick={showLess} className="btn">Less...</a>
+                :
+                <a onClick={showMore} className="btn">More...</a>}
             </div>
         </div>
     )
