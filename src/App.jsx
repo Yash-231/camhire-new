@@ -1,30 +1,29 @@
 import "./App.css";
-import React from "react";
 import About from './components/About';
 import Photographers from "./components/Photographers";
-import Blogs from "./components/Blogs";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Footer from "./components/footer"
 import Contact from "./components/Contact";
-import camHireImage from './components/img/CAMHIRE.png';
+import Blogs from "./components/Blogs";
+// import Blogposts from './components/Blogposts';
 import { Nav, Container, Navbar } from "react-bootstrap";
-import { render } from "react-dom";
 import {
-  BrowserRouter,
   Link,
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
-import { Button } from 'antd';
+import Blogposts from "./components/Blogposts";
+
+
 function App() {
   return (
     <div className="App">
       <>
-        <Navbar expand="lg" sticky="top" bg="dark" variant="dark"  className="Navbar">
+        <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="Navbar">
           <Container >
           {/* <img src={camHireImage} style={{ width: "60%", height: "80%" }} alt="Camhire"/> */}
-          <Navbar.Brand href="/Home" style={{ fontSize: "2.5rem", fontWeight: 5 }}><b style={{ fontWeight: 700 }}>CAM</b>HIRE</Navbar.Brand>
+          <Navbar.Brand href="/" style={{fontSize: "2.5rem", fontWeight: 200}}><b style={{fontWeight: 700}}>CAM</b>HIRE</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -38,14 +37,15 @@ function App() {
           </Navbar.Collapse>
           </Container>
         </Navbar>
-        <div>
+        <div> 
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/photographers" element={<Photographers />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:title" element={<Blogposts />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />  
           </Routes>
         </div>
         <Footer />

@@ -2,14 +2,15 @@ import React from 'react';
 import data from '../data/data.json';
 import { useState } from "react";
 import './Blogs.css'
-import { Card, Col, Row, Space } from 'antd';
-const { Meta } = Card;
+import { Card, Col, Row } from 'antd';
+import { Link } from "react-router-dom";
 
+
+const { Meta } = Card;
 
 const Blogs = () => {
 
     const [next, setNext] = useState(4);
-
     const showMore = () => {
         setNext(next + 4);
     };
@@ -18,7 +19,6 @@ const Blogs = () => {
         setNext(4);
     };
 
-
     return (
         <div className='main-body'>
                 <h1 className='heading'>Blogs</h1>
@@ -26,9 +26,9 @@ const Blogs = () => {
                 {data.Blogs
                     ?
                     data.Blogs.slice(0, next).map((d, i) => (
-                        i % 3 == 0 ?
-                        <Col span={24} className="gutter-row">
-                            <a href="#">
+                        i % 3 === 0 ?
+                        <Col key={i} span={24} className="gutter-row">
+                            <Link to={`/blogs/${d.title}`} state={d}>
                                 <Card
                                     bordered={false}
                                     hoverable
@@ -37,12 +37,12 @@ const Blogs = () => {
                                 >
                                     <Meta title={d.title} description={d.body}/>
                                 </Card>
-                                </a>
+                                </Link>
                         </Col>
                         :
-                        i % 3 == 1 ?
-                        <Col md={{span:12}} sm={{span: 24}} push={5} className="gutter-row">
-                            <a href="#">
+                        i % 3 === 1 ?
+                        <Col key={i} md={{span:12}} sm={{span: 24}} push={5} className="gutter-row">
+                            <Link to={`/blogs/${d.title}`} state={d}>
                             <Card
                                 bordered={false}
                                 hoverable
@@ -50,11 +50,11 @@ const Blogs = () => {
                             >
                                 <Meta title={d.title} description={d.body}/>
                             </Card>
-                            </a>
+                            </Link>
                         </Col>
                         :
-                        <Col md={{span:12}} sm={{span: 24}} className="gutter-row">
-                            <a href="#">
+                        <Col key={i} md={{span:12}} sm={{span: 24}} className="gutter-row">
+                            <Link to={`/blogs/${d.title}`} state={d}>
                             <Card
                                 bordered={false}
                                 hoverable
@@ -62,7 +62,7 @@ const Blogs = () => {
                             >
                                 <Meta title={d.title} description={d.body}/>
                             </Card>
-                            </a>
+                            </Link>
                         </Col>
                     ))
                     :
@@ -71,9 +71,9 @@ const Blogs = () => {
             </Row>
             <div className='toggleBtn'>
                 {next >= data.Blogs.length ?
-                <a onClick={showLess} className="btn">Less...</a>
+                <button onClick={showLess} className="moreLessBtn">Less...</button>
                 :
-                <a onClick={showMore} className="btn">More...</a>}
+                <button onClick={showMore} className="moreLessBtn">More...</button>}
             </div>
         </div>
     )

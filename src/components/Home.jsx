@@ -10,7 +10,9 @@ import { FaCheck } from "react-icons/fa";
 import { IoCamera } from "react-icons/io5";
 import { CgDollar } from "react-icons/io5";
 import { ImCoinDollar } from "react-icons/im";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import * as Icons from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
   return (
     <div className="Home-container">
@@ -18,7 +20,9 @@ const Home = () => {
         <div className="join-us">
           <div>
             <button className="join-us-button">Join Us</button>
-            <button className="close-button" type="button">X</button>
+            <button className="close-button" type="button">
+              X
+            </button>
           </div>
         </div>
         <div className="header">
@@ -51,9 +55,8 @@ const Home = () => {
             <FaCheck />
             <FontAwesomeIcon icon="fa-solid fa-mug-hot" />
             <i className="fa-solid fa-mug-hot"></i>
-           
           </div>
-         
+
           {/* <div className="icon3">
           <img src={icon3} style={{ width: "50px", height: "50px" ,borderRadius:'50%', marginLeft:'700px'}}alt="/"/>
           </div> */}
@@ -61,9 +64,11 @@ const Home = () => {
             {data.Features
               ? data.Features.map((d, i) => (
                   <div key={`${d.title}-${i}`} className="feature">
-                  <h4 className="feature__title">{d.title}</h4>
-                  <FontAwesomeIcon icon={d.icon} />
-                 
+                    <h4 className="feature__title">{d.title}</h4>
+                    {/* <img src="Ellipse7.png" alt=""></img> */}
+                    {/* <FontAwesomeIcon icon= /> */}
+                  {d.icon}
+        
                     <p>{d.text}</p>
                   </div>
                 ))
@@ -78,7 +83,7 @@ const Home = () => {
           <div className="about-us__image">
             <img
               src={about_photo}
-              style={{ width: "600px", height: "350px" }}
+              style={{ width: "600px", height: "450px" }}
               alt="/"
             />
           </div>

@@ -96,12 +96,12 @@
   max-width: fit-content;
   /* background-image:  radial-gradient( rgba(197, 38, 210, 1) ,
   rgba(38, 45, 210, 1) ,rgba(38, 210, 138, 1) , rgba(38, 148, 210, 0.81),rgba(38, 55, 210, 1)); */
-  background-image: url("../images/northen.jpg");
-  background-size: 50px 50px 50px 50px;
-  border-radius: 10%;
-  box-shadow: 10px 10px 10px 2px;
-  background-position: 100%;
-  box-sizing: border-box;
+  /* background-image: url("../images/Ellipse1.png"),url("../images/Ellipse2.png"),url("../images/Ellipse3.png"),url("../images/Ellipse4.png"),url("../images/Ellipse5.png"); */
+  /* background-size: 8px 12px 14px ; */
+  /* border-radius: 33%; */
+  box-shadow: -20px 10px 80px 8px rgba(197, 38, 210, 1), 12px -30px 30px 2px rgba(38, 210, 138, 1), 20px 10px 30px 8px rgba(38, 148, 210, 0.81), 20px 20px 40px 8px rgba(38, 45, 210, 1);
+  /* background-position: 100%; */
+  /* box-sizing: border-box; */
   margin-top: 20px;
 }
 .header__h3 {
@@ -152,6 +152,7 @@
   font-size: 32px;
   font-weight: 700;
   font-family: poppins;
+  margin-top: 20px;
 }
 
 .features {
@@ -163,10 +164,9 @@
   color: rgba(255, 255, 255, 1);
   background-image: url("../images/pngwing.png"), url("../images/pngwing3.png"),
     url("../images/pngwing2.png");
-  /* background-size: 44% 58% ; */
-  background-size: contain, 32%,32%;
+  background-size: contain, contain, contain;
   background-repeat: no-repeat;
-  background-position: center top, -6% top, 105% top;
+  background-position: center top, -6% top, 110% top;
 }
 @media only screen and (min-width: 400px) {
   body {
@@ -188,6 +188,7 @@
   font-weight: bold;
   /* margin-left: 1em; */
   text-align: center;
+ 
 }
 .feature h4 {
   font-family: poppins;
@@ -224,13 +225,12 @@
   font-style: normal;
 }
 
-.about-us__image {
-  width: 25%;
-}
+
 
 .about-us__image img {
   height: auto;
-  width: auto;
+ max-width: 100%;
+  border-radius: 2%;
 }
 .about h1 {
   color: rgba(255, 255, 255, 1);
@@ -251,5 +251,8 @@
   font-weight: 100;
   color: aliceblue;
   font-family: 'Courier New', Courier, monospace;
-   display: inline;
+ display: flex;
+ flex-direction: column;
+ position: relative;
+
 }
