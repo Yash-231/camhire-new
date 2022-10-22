@@ -23,7 +23,7 @@ function App() {
         <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="Navbar">
           <Container >
           {/* <img src={camHireImage} style={{ width: "60%", height: "80%" }} alt="Camhire"/> */}
-          <Navbar.Brand href="/" style={{ fontSize: "2.5rem", fontWeight: 5 }}><b style={{ fontWeight: 700 }}>CAM</b>HIRE</Navbar.Brand>
+          <Navbar.Brand href="/" style={{fontSize: "2.5rem", fontWeight: 200}}><b style={{fontWeight: 700}}>CAM</b>HIRE</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">

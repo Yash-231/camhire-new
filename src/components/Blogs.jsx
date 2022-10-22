@@ -71,9 +71,9 @@ const Blogs = () => {
             </Row>
             <div className='toggleBtn'>
                 {next >= data.Blogs.length ?
-                <button onClick={showLess} className="btn">Less...</button>
+                <button onClick={showLess} className="moreLessBtn">Less...</button>
                 :
-                <button onClick={showMore} className="btn">More...</button>}
+                <button onClick={showMore} className="moreLessBtn">More...</button>}
             </div>
         </div>
     )

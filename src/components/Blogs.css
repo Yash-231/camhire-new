@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+/* @import url("https://fonts.googleapis.com/css?family=Poppins"); */
 
 .heading {
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 1.75rem;
     color: #FFFFFF;
@@ -42,8 +40,6 @@
 }
 
 .ant-card-meta-title {
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -56,9 +52,6 @@
 }
 
 .ant-card-meta-description {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
     color: #FFFFFF;
     text-align: left;
     -webkit-box-orient: vertical;
@@ -69,14 +62,12 @@
     white-space: normal;
 }
 
-.toggleBtn a,
-.toggleBtn a:hover {
+.toggleBtn button,
+.toggleBtn button:hover {
     margin-top: 3rem;
     border: 2px solid #FFFFFF;
     border-radius: 12px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 1000;
+    font-weight: 800;
     font-size: 130%;
     padding: 0.4% 2% 0.4% 2%;
     background: linear-gradient(91.89deg, #C526D2 1.09%, #6D4AE1 89.64%);
@@ -87,7 +78,7 @@
 
 @media only screen and (max-width: 768px) {
     .ant-card-cover img {
-        height: 40vw;
+        height: 30vw;
     }
 
     [class*="ant-card-hoverable"]:not([class*="ant-col-push-5"] a [class*="ant-card-hoverable"]) {
