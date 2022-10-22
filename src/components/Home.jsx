@@ -1,18 +1,13 @@
 import React from "react";
 //  import icon1 from "../images/icon1.png";
-import icon3 from "../images/cam_icon.jpg";
 // import mainLogo from "../images/camhire_logo.png";
 import shortVid from "../video/CamHire_vid.mp4";
 import data from "../data/data.json";
 import about_photo from "../images/landing_page.jpg";
 import "./Home.css";
 import { FaCheck } from "react-icons/fa";
-import { IoCamera } from "react-icons/io5";
-import { CgDollar } from "react-icons/io5";
-import { ImCoinDollar } from "react-icons/im";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import * as Icons from "@fortawesome/free-solid-svg-icons";
+
 const Home = () => {
   return (
     <div className="Home-container">
@@ -48,18 +43,6 @@ const Home = () => {
         <div className="back"></div>
         <div className="features__container">
           <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
-          <div className="icons">
-            <FaCheck />
-            <ImCoinDollar />
-            <IoCamera />
-            <FaCheck />
-            <FontAwesomeIcon icon="fa-solid fa-mug-hot" />
-            <i className="fa-solid fa-mug-hot"></i>
-          </div>
-
-          {/* <div className="icon3">
-          <img src={icon3} style={{ width: "50px", height: "50px" ,borderRadius:'50%', marginLeft:'700px'}}alt="/"/>
-          </div> */}
           <div className="features">
             {data.Features
               ? data.Features.map((d, i) => (
