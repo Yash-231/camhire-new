@@ -1,14 +1,9 @@
 import React from 'react';
-import mainLogo from '../images/camhire_logo.png';
 import shortVid from '../video/CamHire_vid.mp4';
 import data from '../data/data.json';
 import about_photo from '../images/landing_page.jpg';
-import {
-    BrowserRouter,
-    Link,
-    Routes,
-    Route,
-} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign, faCheck, faCamera, faMugHot } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     return (
@@ -44,15 +39,16 @@ const Home = () => {
                                 {' '}
                                 <h3 className="features-title" >{d.title}</h3>
                                 {' '}
-                                <i className={d.icon}></i>
-                                <p >{d.text}</p>
+                                <div style={{ borderRadius: "100%", background: "#373737", width: "2em", height: "2em", margin: "auto" }}>
+                                    <FontAwesomeIcon icon={i===0 ? faDollarSign : i===1 ? faCheck : i===2 ? faCamera : faMugHot} style={{ verticalAlign: "-0.34em" }} />
+                                </div>
+                                <p>{d.text}</p>
                             </div>
                         ))
                         :
                         'loading'
                     }
                 </div>
-
             </div>
             <div className='about_us' >
                 <h1> ABOUT US</h1>
