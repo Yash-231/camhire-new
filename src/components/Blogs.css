@@ -2,13 +2,79 @@
 
 .heading {
     font-weight: 700;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     color: #FFFFFF;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-.ant-col a {
+.outer-cntr {
+    width: 70%;
+    margin: auto;
+}
+
+.blog {
+    position: relative;
+    height: 25vw;
+    margin-bottom: 2%;
+    background-size: cover;
+    background-position: center;
+}
+
+.right-blog, .left-blog {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    width: 49.5%;
+    margin-bottom: 2%;
+    height: 25vw;
+    background-size: cover;
+    background-position: center;
+}
+
+.right-blog {
+    margin-left: 1%;
+}
+
+.blog-desc {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.84);
+}
+
+.blog-title {
+    font-weight: 600;
+    margin-bottom: 0;
+    padding: 0.6%;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.desc {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    padding-left: 0.6%;
+    padding-right: 0.6%;
+    margin-bottom: 1%;
+    color: #FFFFFF;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+
+/* .ant-col a {
     text-decoration: none;
 }
 
@@ -51,14 +117,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-}
+} */
 
 .toggleBtn button,
 .toggleBtn button:hover {
     margin-top: 3rem;
     border: 2px solid #FFFFFF;
     border-radius: 12px;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 130%;
     padding: 0.4% 2% 0.4% 2%;
     background: linear-gradient(91.89deg, #C526D2 1.09%, #6D4AE1 89.64%);
@@ -68,19 +134,11 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .ant-card-cover img {
-        height: 30vw;
+    .blog, .left-blog, .right-blog {
+        height: 30vh;
     }
-
-    [class*="ant-card-hoverable"]:not([class*="ant-col-push-5"] a [class*="ant-card-hoverable"]) {
-        margin: auto;
-    }
-
-    [class*="ant-col-push-5"] {
-        margin-left: -16.8%;
-    }
-
-    [class*="ant-card-hoverable"] {
-        width: 75%;
+    .left-blog, .right-blog {
+        width: 100%;
+        margin: auto 0;
     }
 }

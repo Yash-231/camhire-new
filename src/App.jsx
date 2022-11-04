@@ -6,14 +6,13 @@ import Gallery from "./components/Gallery";
 import Footer from "./components/footer"
 import Contact from "./components/Contact";
 import Blogs from "./components/Blogs";
-// import Blogposts from './components/Blogposts';
+import Blogposts from './components/Blogposts';
 import { Nav, Container, Navbar } from "react-bootstrap";
 import {
   Link,
   Routes,
   Route
 } from "react-router-dom";
-import Blogposts from "./components/Blogposts";
 
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
         <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="Navbar">
           <Container >
           {/* <img src={camHireImage} style={{ width: "60%", height: "80%" }} alt="Camhire"/> */}
-          <Navbar.Brand href="/" style={{fontSize: "2.5rem", fontWeight: 200}}><b style={{fontWeight: 700}}>CAM</b>HIRE</Navbar.Brand>
+          <Navbar.Brand href="/" style={{fontSize: "2.5rem", fontWeight: 300}}><b style={{fontWeight: 700}}>CAM</b>HIRE</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
