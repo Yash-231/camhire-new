@@ -6,13 +6,13 @@ import shortVid from "../video/CamHire_vid.mp4";
 import data from "../data/data.json";
 import about_photo from "../images/landing_page.jpg";
 import "./Home.css";
-import { FaCheck } from "react-icons/fa";
-import { IoCamera } from "react-icons/io5";
-import { CgDollar } from "react-icons/io5";
-import { ImCoinDollar } from "react-icons/im";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import * as Icons from "@fortawesome/free-solid-svg-icons";
+import {
+  faDollarSign,
+  faCheck,
+  faCamera,
+  faMugHot,
+} from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
   return (
     <div className="Home-container">
@@ -39,7 +39,13 @@ const Home = () => {
           </div>
           <div className="header__right">
             <div className="video__container">
-              <video autoPlay loop muted className="video__player">
+              <div className="video video__player"></div>
+              <video
+                autoPlay
+                loop
+                muted
+                className="video__player"
+              >
                 <source src={shortVid} type="video/mp4" />
               </video>
             </div>
@@ -48,27 +54,38 @@ const Home = () => {
         <div className="back"></div>
         <div className="features__container">
           <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
-          <div className="icons">
-            <FaCheck />
-            <ImCoinDollar />
-            <IoCamera />
-            <FaCheck />
-            <FontAwesomeIcon icon="fa-solid fa-mug-hot" />
-            <i className="fa-solid fa-mug-hot"></i>
-          </div>
 
-          {/* <div className="icon3">
-          <img src={icon3} style={{ width: "50px", height: "50px" ,borderRadius:'50%', marginLeft:'700px'}}alt="/"/>
-          </div> */}
           <div className="features">
             {data.Features
               ? data.Features.map((d, i) => (
                   <div key={`${d.title}-${i}`} className="feature">
                     <h4 className="feature__title">{d.title}</h4>
-                    {/* <img src="Ellipse7.png" alt=""></img> */}
-                    {/* <FontAwesomeIcon icon= /> */}
-                  {d.icon}
-        
+                    <div className="icon">
+                      <div
+                        style={{
+                          borderRadius: "100%",
+                          background: "#373737",
+                          width: "2em",
+                          height: "2em",
+                          margin: "auto",
+                          marginBottom: "-20px",
+                        }}
+                      >
+                        <FontAwesomeIcon
+                          icon={
+                            i === 0
+                              ? faDollarSign
+                              : i === 1
+                              ? faCheck
+                              : i === 2
+                              ? faCamera
+                              : faMugHot
+                          }
+                          style={{ verticalAlign: "-0.34em" }}
+                        />
+                      </div>
+                    </div>
+
                     <p>{d.text}</p>
                   </div>
                 ))

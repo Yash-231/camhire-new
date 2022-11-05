@@ -6,12 +6,17 @@
 }
 
 #root{
-  background: #121316;
+  background-image: linear-gradient(to right,
+    rgba(0, 0, 0, 1),rgba(18, 19, 22, 1));
   color: #FFFFFF;
 }
 
 html {
-  background: #121316;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(18, 19, 22, 1)
+  );
   padding-top: 2%;
 }
 
@@ -74,7 +79,9 @@ html {
 }
 
 .me-auto a:hover {
-  color: #FFFFFF;
+  color: 
+  rgba(255, 255, 255, 1);
+  font-weight: 700;
 }
 
 .Navbar{
@@ -110,9 +117,11 @@ html {
     position: relative;
     right: auto;
     width: 100%;
+ 
   }
   .me-auto a {
     padding: 2%;
+   
   }
   .me-auto a {
     border-top: 1px solid rgba(255, 255, 255, 0.1);

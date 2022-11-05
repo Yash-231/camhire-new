@@ -32,7 +32,7 @@ function App() {
               <Nav.Link as={Link} to="/photographers">Photographers</Nav.Link>
               <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
               <Nav.Link as={Link} to="/gallery">Gallery</Nav.Link>
-              <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+              <Nav.Link as={Link} to="/Contact">Contact Us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
           </Container>
