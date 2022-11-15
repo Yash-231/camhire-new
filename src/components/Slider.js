@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../data/data.json";
-import { Card } from "react-bootstrap";
+// import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Slider.css'
@@ -63,16 +63,3 @@ const Sliders = () => {
 
 export default Sliders;
 
-{
-  /* <div class="card" style={{ width: "18rem" }}>
-  <img
-    class="card-img-top"
-    varient="top"
-    src={data.Photographers[index].imageUrl}
-    alt="Card image cap"
-  />
-  <div class="card-body">
-    <h5 class="card-title">{data.Photographers[index].title}</h5>
-  </div>
-</div>; */
-}

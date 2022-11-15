@@ -1,37 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import mainLogo from '../images/camhire_logo.png';
+import React from 'react';
+// import mainLogo from '../images/camhire_logo.png';
 import shortVid from '../video/CamHire_vid.mp4';
 import data from '../data/data.json';
 import about_photo from '../images/landing_page.jpg';
-import Pagination from './Pagination';
-import Card from './Card';
+// import Pagination from './Pagination';
+// import Card from './Card';
 // import Slider from 'react-slick';
 import 'slick-carousel/slick/slick';
 import Slider from './Slider';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import "./Home.css";
-import {
-    BrowserRouter,
-    Link,
-    Routes,
-    Route,
-} from "react-router-dom";
-import Blogs from './Blogs';
+// import {
+//     BrowserRouter,
+//     Link,
+//     Routes,
+//     Route,
+// } from "react-router-dom";
+// import Blogs from './Blogs';
+
+
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign, faCheck, faCamera, faMugHot } from '@fortawesome/free-solid-svg-icons';
 
 console.log(data.Photographers);
 const Home = () => {
 
-    const [showing, setIsShowing] = useState(true);
-    const [photographerIndex, setPhotographerIndex] = useState(-1);
-    const [productDataList, setProductDataList] = useState([]);
-    const resetStatus = () => {
-        setIsShowing(true);
-        setPhotographerIndex(-1)
-    }
-    const onChangePage = (pageOfItems) => {
-        setProductDataList(pageOfItems)
-    }
+
+
 
     return (
         <div classname="wrapper">
@@ -66,15 +64,16 @@ const Home = () => {
                                 {' '}
                                 <h3 className="features-title" >{d.title}</h3>
                                 {' '}
-                                <i className={d.icon}></i>
-                                <p >{d.text}</p>
+                                <div style={{ borderRadius: "100%", background: "#373737", width: "2em", height: "2em", margin: "auto" }}>
+                                    <FontAwesomeIcon icon={i === 0 ? faDollarSign : i === 1 ? faCheck : i === 2 ? faCamera : faMugHot} style={{ verticalAlign: "-0.34em" }} />
+                                </div>
+                                <p>{d.text}</p>
                             </div>
                         ))
                         :
                         'loading'
                     }
                 </div>
-
             </div>
             <div className='about_us' >
                 <h1> ABOUT US</h1>
@@ -93,72 +92,10 @@ const Home = () => {
             <div className='photographers' >
                 <h1>Our Photographers</h1>
 
-                <>
-                    {showing && photographerIndex === -1 ?
-                        <div id='photographers' className='text-center'>
-                            <div className='container'>
-                                <div className='section-title'>
-                                    <h2 data-aos="fade-up" data-aos-duration="1000">Our Photographers</h2>
-                                    <p data-aos="fade-up" data-aos-duration="1000">
-                                        Camhire has a team of diverse talents from across the nation who are perfect for
-                                        capturing memories and etching them in your hearts.
-                                    </p>
-                                </div>
-                                <div className='row'>
-                                    <div className="portfolio-item cursor">
 
 
-                                        {productDataList//onClick={(i) => expandPhotographer(d.index)}
-                                            ? productDataList.map((d, i) => (
-                                                <div key={`${d.title}-${i}`} className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-6" data-aos='fade-up' data-aos-duration='1000'>
-                                                    <Card
-                                                        title={d.title}
-                                                        imageUrl={d.imageUrl}
-                                                        body={d.body}
-                                                        codeword={d.codeword}
-                                                        setIsPhotographerPosition={setPhotographerIndex}
-                                                        index={d.index}
-                                                        setIsShowData={setIsShowing}
+                <Slider />
 
-                                                    />
-                                                </div>
-                                            ))
-                                            : 'loading'}</div>
-                                </div>
-                                <div>
-                                   
-                                </div>
-                            </div>
-
-
-
-                            {
-                                <div className="container-fluid">
-                                    <div className="row">
-                                        <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
-                                        <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12">
-
-                                            <Pagination className="pg-style"
-                                                pageSize={3}
-                                                items={data.Photographers}
-                                                onChangePage={onChangePage}
-                                            />
-                                        </div>
-                                        <div className="col-md-4 col-sm-12 col-lg-4 col-xl-4 col-12"></div>
-
-                                    </div>
-                                </div>}
-
-
-
-
-                        </div> : <>
-
-
-                        </>
-                    }
-                    <Slider />
-                </>
 
             </div>
             <div className='blogs' >
@@ -193,7 +130,7 @@ const Home = () => {
                             <div className="col-8">
                                 <div className="row">
                                     <div className="col-8">
-                                        <h2  id='welcome' >welcome</h2>
+                                        <h2 id='welcome' >welcome</h2>
                                     </div>
                                     <img className="col-4  " id='gphoto3' src={data.Photographers[2].imageUrl} alt="" />
                                     <div id='quotecol' className="col-12 ">
@@ -203,7 +140,7 @@ const Home = () => {
                             <img className="col-4" id='gphoto4' src={data.Photographers[3].imageUrl} alt="" />
 
                         </div>
-                       
+
 
                         <div className="row justify-content-end">
 
