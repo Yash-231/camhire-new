@@ -27,7 +27,7 @@ const Sliders = () => {
   };
   const styles = {
     width: "18rem",
-    margin: "10px 50px",
+    padding: "10px 50px !important",
     
     // height:'230px',
   };
@@ -38,7 +38,7 @@ const Sliders = () => {
         <Slider {...settings}>
           {post.map((index) => {
             return (
-              <div>
+              
                 <div class="card" style={styles}>
                   <img
                     class="card-img-top"
@@ -52,7 +52,7 @@ const Sliders = () => {
                     </h5>
                   </div>
                 </div>
-              </div>
+              
             );
           })}
         </Slider>

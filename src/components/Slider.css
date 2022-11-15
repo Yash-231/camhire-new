@@ -37,4 +37,10 @@
 .block {
   margin: 40px 40px;
 }
+/* .slick-current:not(.slick-current:nth-child(2)) {
+  padding-top: 1.15%;
+} */
+.slick-slide:not( .slick-center){
+    padding-top: 0.2%;
 
+}
