@@ -13,6 +13,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { Slider } from "antd";
 
 
 function App() {

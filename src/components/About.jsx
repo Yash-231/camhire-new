@@ -1,12 +1,10 @@
 import React from 'react'
+import { Row } from 'react-bootstrap';
+import data from "../data/data.json";
+import './About.css'
 
 const About = () => {
-  return (
-      <div>
-      <p>About Us</p>
-    
-    </div>
-  )
+  <div></div>
 }
 
 export default About;

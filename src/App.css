@@ -4,7 +4,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#root{
+#root {
   background: #121316;
   color: #FFFFFF;
 }
@@ -48,6 +48,7 @@ html {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -69,7 +70,7 @@ html {
   position: relative;
 }
 
-.me-auto{
+.me-auto {
   position: absolute;
   right: 8%;
   width: 70%;
@@ -80,28 +81,33 @@ html {
   color: #FFFFFF;
 }
 
-.Navbar{
-  background:linear-gradient(90deg, #29323C, #485563);
+.Navbar {
+  background: linear-gradient(90deg, #29323C, #485563);
 }
 
-@media screen and (max-width: 768px){
-  html, body{
+@media screen and (max-width: 768px) {
+
+  html,
+  body {
     overflow-x: hidden;
     width: 100vw;
   }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
   .Navbar {
     padding: 0 !important;
     position: sticky !important;
   }
+
   .navbar-toggler:focus {
     box-shadow: none !important;
   }
+
   .navbar-toggler:active {
     outline: 3px solid rgba(255, 255, 255, 0.1) !important;
   }
+
   .container {
     margin: 0 !important;
     padding: 0 !important;
@@ -109,17 +115,21 @@ html {
     max-width: 100% !important;
     justify-content: space-around !important;
   }
+
   .me-auto {
     position: relative;
     right: auto;
     width: 100%;
   }
+
   .me-auto a {
     padding: 2%;
   }
+
   .me-auto a {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
+
   .me-auto a:active {
     background-color: #121316;
   }
