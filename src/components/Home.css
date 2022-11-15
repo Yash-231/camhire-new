@@ -1,48 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
 
-
-.left_quote h3{
-    
-    font-size: 25px;
+.left_quote h3 {
+  font-size: 25px;
 }
 .header {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-.header-left_quote{
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.header-left_quote {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Endless {
-    height: 270px;
-    width: 707px;
-    left: 3.5px;
-    top: 10px;
-    border-radius: nullpx;
-
+  height: 270px;
+  width: 707px;
+  left: 3.5px;
+  top: 10px;
+  border-radius: nullpx;
 }
 
- .we{
-    height: 117px;
-    width: 630px;
-    left: 10px;
-    top: 10px;
-    border-radius: nullpx;
-    }
-.we h2{
-    height: 117px;
-width: 630px;
-left: 10px;
-top: 10px;
-border-radius: nullpx;
+.we {
+  height: 117px;
+  width: 630px;
+  left: 10px;
+  top: 10px;
+  border-radius: nullpx;
+}
+.we h2 {
+  height: 117px;
+  width: 630px;
+  left: 10px;
+  top: 10px;
+  border-radius: nullpx;
+}
+.right {
+  height: 686px;
+  width: 607px;
 
-} 
- .right{
-height: 686px;
-width: 607px;
+  border-radius: 20px;
+  flex-direction: column;
+}
 
-border-radius: 20px;
-flex-direction: column;
+#gallery{
+   font-family: "Poppins";
+  color: aliceblue;
+  font-size:400%;
+  font-weight: 500;
+  
+}
+.gallery {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#gphoto1 {
+  height: 300px;
+
+  /* position: relative; */
+  object-fit: cover;
+}
+#gphoto2 {
+  height: 300px;
+  /* width:600px; */
+
+  object-fit: fill;
+  /* margin-right: 25px; */
+}
+#gphoto3 {
+  height: 200px;
+  
+  object-fit: cover;
+}
+#gphoto4 {
+  height: 300px;
+  object-fit: cover;
+}
+#gphoto5 {
+  height: 300px;
+  object-fit: cover;
+}
+#gphoto6 {
+  height: 300px;
+  object-fit: cover;
+}
+#welcome {
+  font-family: "Poppins";
+  color: aliceblue;
+  font-size:600%;
+  font-weight: 500;
+  margin-top: 40px;
+}
+#welcomecol {
+  justify-content: space-around;
+  align-items: start;
+}
+#quotecol {
+  padding-top: 2rem;
+   
+  
+}
+#quote{
+  font-family: "Poppins";
+  color: aliceblue;
+  font-size:200%;
+  font-weight: 500;
 }

@@ -5,6 +5,10 @@ import data from '../data/data.json';
 import about_photo from '../images/landing_page.jpg';
 import Pagination from './Pagination';
 import Card from './Card';
+// import Slider from 'react-slick';
+import 'slick-carousel/slick/slick';
+import Slider from './Slider';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import "./Home.css";
 import {
@@ -88,7 +92,7 @@ const Home = () => {
 
             <div className='photographers' >
                 <h1>Our Photographers</h1>
-                
+
                 <>
                     {showing && photographerIndex === -1 ?
                         <div id='photographers' className='text-center'>
@@ -121,6 +125,9 @@ const Home = () => {
                                             ))
                                             : 'loading'}</div>
                                 </div>
+                                <div>
+                                   
+                                </div>
                             </div>
 
 
@@ -143,15 +150,16 @@ const Home = () => {
                                 </div>}
 
 
-                            
+
 
                         </div> : <>
 
-                            
+
                         </>
                     }
+                    <Slider />
                 </>
-                
+
             </div>
             <div className='blogs' >
                 <h1> Blogs</h1>
@@ -168,7 +176,48 @@ const Home = () => {
 
             </div>
             <div className='gallery'>
-                <h1>Gallery</h1>
+                <h1 id='gallery' >Gallery</h1>
+                <div className="row">
+                    <div className="col-10 mx-auto">
+                        <div className="row row justify-content-start ">
+
+
+                            <img className="col-5" id='gphoto1' src={data.Photographers[0].imageUrl} alt="" />
+
+
+
+                            <img className='col-7' id='gphoto2' src={data.Photographers[1].imageUrl} alt="" />
+
+                        </div>
+                        <div className="row">
+                            <div className="col-8">
+                                <div className="row">
+                                    <div className="col-8">
+                                        <h2  id='welcome' >welcome</h2>
+                                    </div>
+                                    <img className="col-4  " id='gphoto3' src={data.Photographers[2].imageUrl} alt="" />
+                                    <div id='quotecol' className="col-12 ">
+                                        <p id='quote'>to a larger-than-life experience with us</p>                                    </div>
+                                </div>
+                            </div>
+                            <img className="col-4" id='gphoto4' src={data.Photographers[3].imageUrl} alt="" />
+
+                        </div>
+                       
+
+                        <div className="row justify-content-end">
+
+                            <img className="col-7 " id='gphoto5' src={data.Photographers[4].imageUrl} alt="" />
+                        </div>
+                        <div className="row row justify-content-start">
+                            <img className="col-12 " id='gphoto6' src={data.Photographers[6].imageUrl} alt="" />
+
+                        </div>
+                    </div>
+
+
+
+                </div>
 
             </div>
             <div className='contact'>

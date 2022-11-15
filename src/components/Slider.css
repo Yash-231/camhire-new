@@ -1,0 +1,40 @@
+.card-body {
+  display: none;
+}
+.slick-center .card-body {
+  display: block;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+/* .card{
+    position: relative;
+} */
+
+/* .card-body{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+#hello {
+  height: 400px;
+}
+.image {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.card-title {
+  color: aliceblue;
+}
+.slick-center .card-img-top {
+  height: 300px;
+}
+.block {
+  margin: 40px 40px;
+}
+
