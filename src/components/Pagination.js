@@ -115,14 +115,14 @@ class Pagination extends React.Component {
                 {pager.currentPage === 1 ? (
                   <button
                     disabled
-                    class="btn btn-custom-page-disabled btn-lg page-scroll"
+                    className="btn btn-custom-page-disabled btn-lg page-scroll"
                   >
                     prev
                   </button>
                 ) : (
                   <button
                     onClick={() => this.setPage(pager.currentPage - 1)}
-                    class="btn btn-custom-page btn-lg page-scroll"
+                    className="btn btn-custom-page btn-lg page-scroll"
                   >
                     prev
                   </button>
@@ -131,7 +131,7 @@ class Pagination extends React.Component {
               {pager.pages.map((page, index) => (
                 <li key={index}>
                   <button
-                    class="btn btn-custom-page btn-lg page-scroll"
+                    className="btn btn-custom-page btn-lg page-scroll"
                     onClick={() => this.setPage(page)}
                   >
                     {page}
@@ -140,7 +140,7 @@ class Pagination extends React.Component {
               ))}
               <li>
                 <button
-                  class="btn btn-custom-page btn-lg page-scroll"
+                  className="btn btn-custom-page btn-lg page-scroll"
                   disabled={pager.currentPage === pager.totalPages}
                   onClick={() => this.setPage(pager.currentPage + 1)}
                 >

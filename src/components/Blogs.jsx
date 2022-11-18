@@ -23,7 +23,7 @@ const Blogs = () => {
                     ?
                     data.Blogs.slice(0, next).map((d, i) => (
                         i % 3 === 0 ?
-                            <Link style={{textDecoration: "none"}} to={`/blogs/${d.title}`} state={d}>
+                            <Link key={i} style={{textDecoration: "none"}} to={`/blogs/${d.title}`} state={d}>
                                 <div className='blog' style={{backgroundImage: `url(${d.imageUrl})`}}>
                                     <div className='blog-desc'>
                                         <p className='blog-title'>{d.title}</p>
@@ -33,7 +33,7 @@ const Blogs = () => {
                             </Link>
                             :
                             i % 3 === 1 ?
-                                <Link style={{textDecoration: "none"}} to={`/blogs/${d.title}`} state={d}>
+                                <Link key={i} style={{textDecoration: "none"}} to={`/blogs/${d.title}`} state={d}>
                                     <div className='left-blog' style={{backgroundImage: `url(${d.imageUrl})`}}>
                                         <div className='blog-desc'>
                                             <p className='blog-title'>{d.title}</p>
@@ -42,7 +42,7 @@ const Blogs = () => {
                                     </div>
                                 </Link>
                                 :
-                                <Link style={{textDecoration: "none"}} to={`/blogs/${d.title}`} state={d}>
+                                <Link key={i} style={{textDecoration: "none"}} to={`/blogs/${d.title}`} state={d}>
                                     <div className='right-blog' style={{backgroundImage: `url(${d.imageUrl})`}}>
                                         <div className='blog-desc'>
                                             <p className='blog-title'>{d.title}</p>
