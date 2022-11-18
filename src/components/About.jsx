@@ -10,7 +10,7 @@ const About = () => {
     <div className='para'><p>Three years back, five mavericks saw a dream to take a journey off-beat from what they were doing and jumped into a pool of creating stories by capturing moments. One day while sitting in the backyard, one of the stakeholders, also a passionate photographer, pondered the endless hurdles in the business world of photography. Whether it was about finding the best photographers from different corners of the country or picking the apt one according to your style. CamHire is an endeavour to overcome all those barriers and fulfil that very motive of photography. We help photographers and freelancers connect with clients all over Indiato provide desired services. CamHire started off as an expression of Suraj’s hunger for creativity to build photographic content by using different lenses. Adding to his passion for the trueessence of photography, Kuldeep and Yash brought their technical and financial minds,respectively. The marketing brain behind the lenses came forward with the emerging entrepreneur, Simar, who lent all his wisdom to turn a vision into a brand. CamHire became a perfect amalgamation of all the business skills and creative interests.Inspired to look at the world through camera lenses, a venture was born that aims to capture the beauty of human emotions in their truest form.</p></div>
       <div className='second_heading' ><h1>Why Choose us?</h1></div>
     
-      <section>
+ 
  
         <div className='information'>
           <div className='second_para' >
@@ -18,7 +18,7 @@ const About = () => {
       <div className='vector_img'>
       <img
               src={vector}
-              // style={{ width: "900px", height: "450px" }}
+      
               alt="/"
         />
               </div>
@@ -26,7 +26,7 @@ const About = () => {
             </div>
         
         <div className='para1'><p>We help photographers connect<br></br>with clients.</p>
-          <p>We minimize fraud done by both <br></br> parties.</p>
+          <p className='p2'>We minimize fraud done by both <br></br> parties.</p>
           <p>We help scale the <br></br> photography industry</p>
         </div>
         <div className='Third_para'>
@@ -35,7 +35,7 @@ const About = () => {
       </div>
       </div>
     </div>
-      </section>
+   
       <div className='Third_heading'>
         <h1>Who are we ?</h1>
       </div>

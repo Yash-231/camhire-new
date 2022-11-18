@@ -4,9 +4,10 @@
   justify-content: space-between;
   width: 100%;
 }
-/* .form-container{
+.form-container{
     display: flex;
-} */
+    justify-content: center;
+}
 .contact-info p{
     display: flex;
    margin-left: 120px;
@@ -91,7 +92,7 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     margin-left: 120px;
     position: relative;
     top: -155px;
-  
+ 
 }
 .icon1{
     width: 2em;
@@ -99,7 +100,10 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     border: 1.8px solid;
     border-radius: 50%;
     position: relative;
-    top:-138px
+    top:-138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 .icon2{
@@ -108,7 +112,10 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     border: 1.8px solid;
     border-radius: 50%;
    position: relative;
-   top:-98px
+   top:-98px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .icon3{
     width: 2em;
@@ -117,6 +124,9 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     border-radius: 50%;
     position: relative;
     top: -45px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 .form-container{
    
@@ -148,16 +158,18 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     font-size: 15.5px;
     font-family: Poppins;
     font-weight: 600;
+    text-align: left;
     /* line-height: 30px; */
 }
 .mail{
     position: relative;
-    left: -30px;
+    left: 10px;
 }
 .phone{
     position: relative;
-    left: -70px;
+    left: 4px;
 }
+
 /* @media screen and (max-width: 200px) {
     .contact-form{
    flex-direction: column;
@@ -174,13 +186,42 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     min-height: 100vh;
     padding: 2rem;
   } */
-  @media (max-width:1055px){
+  @media (max-width:1005px){
    .container{
     display: block;
    }
    .social-icon{
     justify-content: center;
-   }
 
+   }
+  .mb-3{
+   justify-content: center;
+ align-items: center;
+   
+  }
  
+  }
+  @media (max-width:768px){
+    .container{
+        display: block;
+    }
+    .contact-form{
+        display: flex;
+    }
+    .contact-info address{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    #input1{
+        width: 400px;
+    }
+    #exampleFormControlTextarea1{
+        width: 400px;
+    }
+    #btnradio1{
+        width: 400px;
+    }
+    
   }

@@ -197,9 +197,10 @@
   background-repeat: no-repeat;
   background-position: center top, -6% top, 110% top;
 }
-@media only screen and (min-width: 400px) {
-  body {
+@media only screen and (max-width: 1005px) {
+  .features {
     background-image: url("../images/pngwing.png");
+    background-size:  contain;
   }
 }
 .feature {
@@ -284,4 +285,23 @@
   text-align: center;
   justify-content: center;
   font-size: 20px;
+}
+@media (max-width:768px){
+  .learn-more__button{
+    border: 0;
+    background: none;
+    color: 
+    rgba(201, 111, 209, 1);
+    position: relative;
+    top: -130px;
+    left: 210px;
+    font-size: 23px;
+  }
+  .header__h3{
+    font-size: 35px;
+  }
+  .header__h4{
+    font-size: 23px;
+  }
+
 }
