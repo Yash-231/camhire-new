@@ -7,6 +7,7 @@
 .form-container{
     display: flex;
     justify-content: center;
+    border: 2px solid blue;
 }
 .contact-info p{
     display: flex;
@@ -14,18 +15,19 @@
    position: relative;
    font-size: 30px;
    margin-top: 45px;
-   float: left;
+
 }
 .contact-form{
     margin: 10px;
     padding: 10px;
     color: white;
-    width: 50%;
+    width: 100%;
    display: flex;
    flex-direction: column;
    margin-top: 122px;
    position: relative;
    left: 170px;
+   border: 2px solid blue;
  /* align-items: flex-end; */
  /* margin-top: -260px; */
 
@@ -92,7 +94,8 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     margin-left: 120px;
     position: relative;
     top: -155px;
- 
+   border: 2px solid red;
+   
 }
 .icon1{
     width: 2em;
@@ -151,6 +154,7 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     top: 30px;
     padding: 5px;
     margin: 10px;
+    border: 2px solid red;
 }
 .address h6{
     color: rgba(255, 255, 255, 1);
@@ -170,23 +174,7 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
     left: 4px;
 }
 
-/* @media screen and (max-width: 200px) {
-    .contact-form{
-   flex-direction: column;
-   
-    }
-  } */
-  /* *{
-    margin: 0;
-    padding: 0;
-  } */
-  /* .container{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 2rem;
-  } */
-  @media (max-width:1005px){
+  /* @media (max-width:1005px){
    .container{
     display: block;
    }
@@ -200,28 +188,68 @@ background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rg
    
   }
  
-  }
+  } */
   @media (max-width:768px){
     .container{
         display: block;
     }
     .contact-form{
-        display: flex;
+        display: block;
+        justify-content: flex-start;
     }
-    .contact-info address{
+    .contact-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon1{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .icon2{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .icon3{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .address h6{
+        font-size: 12px;
+    }
+    .address{
+        position: relative;
+        top: -10px;
+        right: 10px;
+    }
+    .icons{
+        position: relative;
+        right: 120px;
+    }
+    /* .contact-info p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .address{
         display: flex;
         justify-content: center;
         align-items: center;
        
     }
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
     #input1{
-        width: 400px;
+        width: 300px;
     }
     #exampleFormControlTextarea1{
-        width: 400px;
+        width: 300px;
     }
     #btnradio1{
-        width: 400px;
+        width: 300px;
     }
     
   }
