@@ -4,13 +4,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#root {
-  background: #121316;
+#root{
+  background-image: linear-gradient(to right,
+    rgba(0, 0, 0, 1),rgba(18, 19, 22, 1));
   color: #FFFFFF;
 }
 
 html {
-  background: #121316;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(18, 19, 22, 1)
+  );
   padding-top: 2%;
 }
 
@@ -62,10 +67,6 @@ html {
   margin: 0 8%;
 }
 
-.navbar-toggler {
-  margin: 0 8%;
-}
-
 #responsive-navbar-nav {
   position: relative;
 }
@@ -78,7 +79,9 @@ html {
 }
 
 .me-auto a:hover {
-  color: #FFFFFF;
+  color: 
+  rgba(255, 255, 255, 1);
+  font-weight: 700;
 }
 
 .Navbar {
@@ -92,6 +95,7 @@ html {
     overflow-x: hidden;
     width: 100vw;
   }
+ 
 }
 
 @media screen and (max-width: 992px) {
@@ -120,10 +124,12 @@ html {
     position: relative;
     right: auto;
     width: 100%;
+ 
   }
 
   .me-auto a {
     padding: 2%;
+   
   }
 
   .me-auto a {
@@ -133,4 +139,5 @@ html {
   .me-auto a:active {
     background-color: #121316;
   }
+ 
 }

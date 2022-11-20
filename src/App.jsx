@@ -27,12 +27,12 @@ function App() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/features">Features</Nav.Link>
+              <Nav.Link as={Link} to="/features">Services</Nav.Link>
               <Nav.Link as={Link} to="/about">About Us</Nav.Link>
               <Nav.Link as={Link} to="/photographers">Photographers</Nav.Link>
               <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
               <Nav.Link as={Link} to="/gallery">Gallery</Nav.Link>
-              <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+              <Nav.Link as={Link} to="/Contact">Contact Us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
           </Container>

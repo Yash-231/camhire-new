@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+.container{
+    display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    border: 2px solid blue;
+}
+.contact-info p{
+    display: flex;
+   margin-left: 120px;
+   position: relative;
+   font-size: 30px;
+   margin-top: 45px;
+
+}
+.contact-form{
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-top: 122px;
+   position: relative;
+   left: 170px;
+   border: 2px solid blue;
+ /* align-items: flex-end; */
+ /* margin-top: -260px; */
+
+}
+#input1{
+    background-color: 
+    rgba(18, 19, 22, 1);
+    padding: 5px;
+    border: 1.5px solid rgba(255, 255, 255, 1);
+    width: 500px;
+    position: relative;
+     
+}
+.mb-3 ::placeholder{
+    color:  rgba(217, 217, 217, 1);
+    ;
+}
+
+#exampleFormControlTextarea1{
+    background-color: 
+    rgba(18, 19, 22, 1);
+    color: 
+    rgba(255, 255, 255, 1);
+    border: 1.5px solid rgba(255, 255, 255, 1);
+    width: 500px;
+    padding:5px ;
+}
+
+.button{
+    width: 500px;
+    height: 45px;
+    position: relative;
+    margin-top: 5px;
+ font-weight: 600;
+background-image: linear-gradient(rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rgba(109, 74, 225, 1));
+}
+.button-label{
+   margin-top: 8px;
+}
+.form{
+    margin: 3px;
+    color: red;
+}
+
+/* .form-container{
+ 
+    margin-left: 630px;
+    margin-top: -270px;
+} */
+.contact-info{
+    color: rgba(255, 255, 255, 1);
+    font-family: Poppins;
+    font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+     padding:10px;
+    margin-left: 120px;
+    position: relative;
+    top: -155px;
+   border: 2px solid red;
+   
+}
+.icon1{
+    width: 2em;
+    height: 2em;
+    border: 1.8px solid;
+    border-radius: 50%;
+    position: relative;
+    top:-138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon2{
+    width: 2em;
+    height: 2em;
+    border: 1.8px solid;
+    border-radius: 50%;
+   position: relative;
+   top:-98px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.icon3{
+    width: 2em;
+    height: 2em;
+    border: 1.8px solid;
+    border-radius: 50%;
+    position: relative;
+    top: -45px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.form-container{
+   
+    width: 50%;
+   
+}
+.social-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+  top: 60px;
+}
+.social-icon :hover{
+    background-image: linear-gradient(to right, rgba(197, 38, 210, 1),rgba(150, 57, 218, 1),rgba(109, 74, 225, 1));
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left:190px;
+    top: 30px;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid red;
+}
+.address h6{
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 65px;
+    font-size: 15.5px;
+    font-family: Poppins;
+    font-weight: 600;
+    text-align: left;
+    /* line-height: 30px; */
+}
+.mail{
+    position: relative;
+    left: 10px;
+}
+.phone{
+    position: relative;
+    left: 4px;
+}
+
+  /* @media (max-width:1005px){
+   .container{
+    display: block;
+   }
+   .social-icon{
+    justify-content: center;
+
+   }
+  .mb-3{
+   justify-content: center;
+ align-items: center;
+   
+  }
+ 
+  } */
+  @media (max-width:768px){
+    .container{
+        display: block;
+    }
+    .contact-form{
+        display: block;
+        justify-content: flex-start;
+    }
+    .contact-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon1{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .icon2{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .icon3{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .address h6{
+        font-size: 12px;
+    }
+    .address{
+        position: relative;
+        top: -10px;
+        right: 10px;
+    }
+    .icons{
+        position: relative;
+        right: 120px;
+    }
+    /* .contact-info p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .address{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    #input1{
+        width: 300px;
+    }
+    #exampleFormControlTextarea1{
+        width: 300px;
+    }
+    #btnradio1{
+        width: 300px;
+    }
+    
+  }

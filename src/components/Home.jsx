@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
 // import mainLogo from '../images/camhire_logo.png';
-import shortVid from '../video/CamHire_vid.mp4';
-import data from '../data/data.json';
-import about_photo from '../images/landing_page.jpg';
+//  import icon1 from "../images/icon1.png";
+import icon3 from "../images/cam_icon.jpg";
+// import mainLogo from "../images/camhire_logo.png";
+import shortVid from "../video/CamHire_vid.mp4";
+import data from "../data/data.json";
+import about_photo from "../images/landing_page.jpg";
+import "./Home.css";
 // import Pagination from './Pagination';
 // import Card from './Card';
 // import Slider from 'react-slick';
-import 'slick-carousel/slick/slick';
+
 import Slider from './Slider';
 import Blogs from './Blogs'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,74 +34,107 @@ import "./Home.css";
 
 
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDollarSign, faCheck, faCamera, faMugHot } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDollarSign,
+  faCheck,
+  faCamera,
+  faMugHot,
+} from "@fortawesome/free-solid-svg-icons";
 console.log(data.Photographers);
 const Home = () => {
+  return (
+    <div className="Home-container">
+      <div className="wrapper">
+        <div className="join-us">
+          <div>
+            <button className="join-us-button">Join Us</button>
+            <button className="close-button" type="button">
+              X
+            </button>
+          </div>
+        </div>
+        <div className="header">
+          <div className="header__left">
+            <h3 className="header__h3">
+              Endless Possibilities with <b className="cam__text">Camera</b>{" "}
+              just a Click Away
+            </h3>
+            <h4 className="header__h4">
+              We are the string which enables you to connects the best
+              photographers in easiest way possible
+            </h4>
+            <button className="learn-more__button">Learn more</button>
+          </div>
+          <div className="header__right">
+            <div className="video__container">
+              <div className="video video__player"></div>
+              <video
+                autoPlay
+                loop
+                muted
+                className="video__player"
+              >
+                <source src={shortVid} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+        <div className="back"></div>
+        <div className="features__container">
+          <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
 
-
-
-
-    return (
-        <div className="wrapper">
-            <div className='header'>
-                <div className='left_quote'>
-                    <h2>Endless Possibilities with Camera just a Click Away</h2>
-                    <h3>We are the string which enables you to  connects the best photographers in easiest way possible</h3>
-                    <button >Load more</button>
-
-                </div>
-                <div className='right'>
-                    <div className='join_button'>
-                        <button>join us</button>
+          <div className="features">
+            {data.Features
+              ? data.Features.map((d, i) => (
+                  <div key={`${d.title}-${i}`} className="feature">
+                    <h4 className="feature__title">{d.title}</h4>
+                    <div className="icon">
+                      <div
+                        style={{
+                          borderRadius: "100%",
+                          background: "#373737",
+                          width: "2em",
+                          height: "2em",
+                          margin: "auto",
+                          marginBottom: "-20px",
+                        }}
+                      >
+                        <FontAwesomeIcon
+                          icon={
+                            i === 0
+                              ? faDollarSign
+                              : i === 1
+                              ? faCheck
+                              : i === 2
+                              ? faCamera
+                              : faMugHot
+                          }
+                          style={{ verticalAlign: "-0.34em" }}
+                        />
+                      </div>
                     </div>
-                    <div className='video'>
-                        <video autoPlay loop muted className='video'>
-                            <source src={shortVid} type="video/mp4" />
-                        </video>
 
-                    </div>
-                </div>
-
-            </div>
-            <div className='features' >
-                <div className='heading'>
-                    <h1> WHAT WE HAVE TO OFFER</h1>
-                </div>
-                <div className='row' >
-                    {data.Features
-                        ? data.Features.map((d, i) => (
-                            <div key={`${d.title}-${i}`} className='col-xs-6 col-md-3'>
-                                {' '}
-                                <h3 className="features-title" >{d.title}</h3>
-                                {' '}
-                                <div style={{ borderRadius: "100%", background: "#373737", width: "2em", height: "2em", margin: "auto" }}>
-                                    <FontAwesomeIcon icon={i === 0 ? faDollarSign : i === 1 ? faCheck : i === 2 ? faCamera : faMugHot} style={{ verticalAlign: "-0.34em" }} />
-                                </div>
-                                <p>{d.text}</p>
-                            </div>
-                        ))
-                        :
-                        'loading'
-                    }
-                </div>
-            </div>
-            <hr />
-            <div className='about_us' >
-                <h1> ABOUT US</h1>
-                <div className='about_para' >
-                    <h6> {
-                        data.About.paragraph
-                    }</h6>
-
-                </div>
-                <div className='about_image' >
-
-                    <img src={about_photo} style={{ height: '250px' }} alt="/" />
-                </div>
-            </div>
-            <hr />
+                    <p>{d.text}</p>
+                  </div>
+                ))
+              : "Loading"}
+          </div>
+        </div>
+        <div className="about">
+          <h1 className="features__heading">ABOUT US</h1>
+        </div>
+        <div className="about-us">
+          <p className="about-us__para">{data.About.paragraph}</p>
+          <div className="about-us__image">
+            <img
+              src={about_photo}
+              style={{ width: "600px", height: "450px" }}
+              alt="/"
+            />
+          </div>
+        </div>
+        
             <div className='photographers' >
                 <h1 className='heading'>Our Photographers</h1>
                 <Slider />
@@ -129,15 +166,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='contact'>
-                {/* <div className='contact_left'>
-                    <h1>Contact Us</h1>
-                </div>
-                <div className='contact right'></div> */}
-            </div>
         </div>
+      </div>
+  );
 
-    )
 }
 
-export default Home
+export default Home;
