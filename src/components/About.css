@@ -275,3 +275,11 @@ top: 140px;
     width: 620px;
   }
 } */
+.photo img {
+  object-fit: fill;
+  border-radius: 5px;
+  border: 2px solid rgb(166, 22, 232);
+  width: 1px;
+  height: 60px;
+}
+

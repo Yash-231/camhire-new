@@ -1,4 +1,5 @@
 import React from "react";
+// import mainLogo from '../images/camhire_logo.png';
 //  import icon1 from "../images/icon1.png";
 import icon3 from "../images/cam_icon.jpg";
 // import mainLogo from "../images/camhire_logo.png";
@@ -6,6 +7,33 @@ import shortVid from "../video/CamHire_vid.mp4";
 import data from "../data/data.json";
 import about_photo from "../images/landing_page.jpg";
 import "./Home.css";
+// import Pagination from './Pagination';
+// import Card from './Card';
+// import Slider from 'react-slick';
+
+import Slider from './Slider';
+import Blogs from './Blogs'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import img1 from "../images/gallery-img-1.jpg";
+import img2 from "../images/gallery-img-2.jpg";
+import img3 from "../images/gallery-img-3.jpg";
+import img4 from "../images/gallery-img-4.jpg";
+import img5 from "../images/gallery-img-5.jpg";
+import img6 from "../images/gallery-img-6.jpg";
+import img7 from "../images/gallery-img-7.jpg";
+
+import "./Home.css";
+// import {
+//     BrowserRouter,
+//     Link,
+//     Routes,
+//     Route,
+// } from "react-router-dom";
+// import Blogs from './Blogs';
+
+
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDollarSign,
@@ -13,6 +41,7 @@ import {
   faCamera,
   faMugHot,
 } from "@fortawesome/free-solid-svg-icons";
+console.log(data.Photographers);
 const Home = () => {
   return (
     <div className="Home-container">
@@ -105,32 +134,42 @@ const Home = () => {
             />
           </div>
         </div>
-
-        <div className="photographers">
-          <h1 className="photographers__image">Our Photographers</h1>
-          <div className="photographers__images"></div>
-        </div>
-        <div className="blogs">
-          <h1>Blogs</h1>
-          <div className="row1"></div>
-          <div className="row2">
-            <div className="left2"></div>
-            <div className="right2"></div>
-          </div>
-          <div className="row3"></div>
-        </div>
-        <div className="gallery">
-          <h1>Gallery</h1>
-        </div>
-        <div className="contact">
-          <div className="contact_left">
-            <h1>Contact Us</h1>
-          </div>
-          <div className="contact right"></div>
+        
+            <div className='photographers' >
+                <h1 className='heading'>Our Photographers</h1>
+                <Slider />
+            </div>
+            <hr />
+            <Blogs />
+            <hr />
+            <div id='gallery'>
+                <div className='gallery-title'>
+                    <h1>Gallery</h1>
+                </div>
+                <div className="gallery-container">
+                    <div className='row'>
+                        <img src={img1} alt="" style={{ width: "40%" }} />
+                        <img src={img2} alt="" style={{ width: "60%" }} />
+                    </div>
+                    <div className="row">
+                        <span>Welcome</span>
+                        <img src={img3} alt="" />
+                        <img src={img4} alt="" />
+                        <span>to a larger-than-life experience with us</span>
+                    </div>
+                    <div className='row'>
+                        <img src={img5} alt="" style={{ width: "40%" }} />
+                        <img src={img6} alt="" style={{ width: "60%" }} />
+                    </div>
+                    <div className="row">
+                        <img src={img7} alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
-    </div>
   );
-};
+
+}
 
 export default Home;
