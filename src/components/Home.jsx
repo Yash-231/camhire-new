@@ -1,57 +1,24 @@
 import React from "react";
-// import mainLogo from '../images/camhire_logo.png';
-//  import icon1 from "../images/icon1.png";
-import icon3 from "../images/cam_icon.jpg";
-// import mainLogo from "../images/camhire_logo.png";
-import shortVid from "../video/CamHire_vid.mp4";
-import data from "../data/data.json";
-import about_photo from "../images/landing_page.jpg";
+import shortVideo from "../video/CamHire_vid.mp4";
+import aboutUSPicture from "../images/landing_page.jpg";
+import photographerBackground from "../images/pngwing.png";
 import "./Home.css";
-// import Pagination from './Pagination';
-// import Card from './Card';
-// import Slider from 'react-slick';
-
 import Slider from './Slider';
-import Blogs from './Blogs'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import img1 from "../images/gallery-img-1.jpg";
-import img2 from "../images/gallery-img-2.jpg";
-import img3 from "../images/gallery-img-3.jpg";
-import img4 from "../images/gallery-img-4.jpg";
-import img5 from "../images/gallery-img-5.jpg";
-import img6 from "../images/gallery-img-6.jpg";
-import img7 from "../images/gallery-img-7.jpg";
+import Blogs from './Blogs';
+import Gallery from "./Gallery";
+import ContactUs from "./ContactUs";
+import { Link } from 'react-router-dom';
+import Features from "./Features";
 
-import "./Home.css";
-// import {
-//     BrowserRouter,
-//     Link,
-//     Routes,
-//     Route,
-// } from "react-router-dom";
-// import Blogs from './Blogs';
-
-
-
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDollarSign,
-  faCheck,
-  faCamera,
-  faMugHot,
-} from "@fortawesome/free-solid-svg-icons";
-console.log(data.Photographers);
 const Home = () => {
+
   return (
     <div className="Home-container">
-      <div className="wrapper">
+      {/* <div className="wrapper">
         <div className="join-us">
           <div>
             <button className="join-us-button">Join Us</button>
-            <button className="close-button" type="button">
-              X
-            </button>
+            <button className="close-button" type="button">X</button>
           </div>
         </div>
         <div className="header">
@@ -79,95 +46,55 @@ const Home = () => {
               </video>
             </div>
           </div>
+        </div> */}
+      <div id="wrapper">
+        <div className="button-wrapper">
+          <button>
+            <span>Join Us</span>
+            <span>X</span>
+          </button>
         </div>
-        <div className="back"></div>
-        <div className="features__container">
-          <h1 className="features__heading">WHAT WE HAVE TO OFFER</h1>
-
-          <div className="features">
-            {data.Features
-              ? data.Features.map((d, i) => (
-                  <div key={`${d.title}-${i}`} className="feature">
-                    <h4 className="feature__title">{d.title}</h4>
-                    <div className="icon">
-                      <div
-                        style={{
-                          borderRadius: "100%",
-                          background: "#373737",
-                          width: "2em",
-                          height: "2em",
-                          margin: "auto",
-                          marginBottom: "-20px",
-                        }}
-                      >
-                        <FontAwesomeIcon
-                          icon={
-                            i === 0
-                              ? faDollarSign
-                              : i === 1
-                              ? faCheck
-                              : i === 2
-                              ? faCamera
-                              : faMugHot
-                          }
-                          style={{ verticalAlign: "-0.34em" }}
-                        />
-                      </div>
-                    </div>
-
-                    <p>{d.text}</p>
-                  </div>
-                ))
-              : "Loading"}
-          </div>
-        </div>
-        <div className="about">
-          <h1 className="features__heading">ABOUT US</h1>
-        </div>
-        <div className="about-us">
-          <p className="about-us__para">{data.About.paragraph}</p>
-          <div className="about-us__image">
-            <img
-              src={about_photo}
-              style={{ width: "600px", height: "450px" }}
-              alt="/"
-            />
-          </div>
-        </div>
-        
-            <div className='photographers' >
-                <h1 className='heading'>Our Photographers</h1>
-                <Slider />
+        <div className="rest-content">
+          <div className="left-block">
+            <div className="text-content">
+              <h1>Endless Possibilities with <span className="camera-text">Camera</span> just a Click Away</h1>
+              <span>We are the string which enables you to  connects the best photographers in easiest way possible</span>
             </div>
-            <hr />
-            <Blogs />
-            <hr />
-            <div id='gallery'>
-                <div className='gallery-title'>
-                    <h1>Gallery</h1>
-                </div>
-                <div className="gallery-container">
-                    <div className='row'>
-                        <img src={img1} alt="" style={{ width: "40%" }} />
-                        <img src={img2} alt="" style={{ width: "60%" }} />
-                    </div>
-                    <div className="row">
-                        <span>Welcome</span>
-                        <img src={img3} alt="" />
-                        <img src={img4} alt="" />
-                        <span>to a larger-than-life experience with us</span>
-                    </div>
-                    <div className='row'>
-                        <img src={img5} alt="" style={{ width: "40%" }} />
-                        <img src={img6} alt="" style={{ width: "60%" }} />
-                    </div>
-                    <div className="row">
-                        <img src={img7} alt="" />
-                    </div>
-                </div>
+            <div className="learn-more-wrapper">
+              <button>Learn more</button>
             </div>
+          </div>
+          <div className="video-wrapper">
+            <video autoPlay loop muted>
+              <source src={shortVideo} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
+      <Features />
+      <hr />
+      <div id="about-us">
+        <h1>About Us</h1>
+        <div className="about-us-content">
+          <div className="about-us-paragraph">
+            <p>Three years back, five mavericks saw a dream to take a journey off-beat from what they were doing and jumped into a pool of creating stories by capturing moments. One day while sitting in the backyard, one of the stakeholders, also a passionate photographer, pondered the endless hurdles in the business world of photography. Whether it was about finding the best photographers from different corners of the country or picking the apt one according to your style. CamHire is an endeavour to overcome all those barriers and fulfil that very motive of photography. We help photographers and freelancers connect with clients all over Indiato provide desired services. CamHire started off as an expression of...</p>
+            <Link to="/about">...ReadMore</Link>
+          </div>
+          <img src={aboutUSPicture} alt="about us" />
+        </div>
+      </div>
+      <hr />
+      <div id='photographers' style={{ backgroundImage: `url(${photographerBackground})` }}>
+        <h1 className='heading'>Our Photographers</h1>
+        <Slider />
+      </div>
+      <hr />
+      <Blogs />
+      <hr />
+      <Gallery />
+      <hr />
+      <ContactUs />
+    </div>
   );
 
 }

@@ -24,7 +24,7 @@ const Sliders = () => {
   };
 
   return (
-    <div id="photographers">
+    <div className="photographers">
       <span onClick={handlePrevious} className="material-symbols-outlined">arrow_back_ios_new</span>
       {current.map((index) => {
         return (

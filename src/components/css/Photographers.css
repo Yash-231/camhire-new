@@ -1,0 +1,107 @@
+#photographers-page h1 {
+    text-align: center;
+}
+
+#photographers-page .photographers-container {
+    display: flex;
+    margin: 7.5% 0;
+}
+
+#photographers-page .photographers-container span,
+#photographers-page .photographers-container p {
+    font-weight: 600;
+}
+
+#photographers-page .photographers-container .profile-image {
+    width: 27%;
+    margin: 0 2%;
+    position: relative;
+    height: 35vw;
+}
+
+
+#photographers-page .photographers-container .profile-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #C526D2 0%, #6D4AE1 112.56%);
+    mask: linear-gradient(180deg, #C526D2 0%, #6D4AE1 112.56%) content-box, linear-gradient(180deg, #C526D2 0%, #6D4AE1 112.56%);
+    -webkit-mask: linear-gradient(180deg, #C526D2 0%, #6D4AE1 112.56%) content-box, linear-gradient(180deg, #C526D2 0%, #6D4AE1 112.56%);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+#photographers-page .photographers-container .profile-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+#photographers-page .photographers-container .profile-image span {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 5vw;
+    font-size: 1.25vw;
+    border-radius: 0 0 15px 15px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#photographers-page .photographers-container .content {
+    padding: 0 2%;
+    width: 65%;
+    position: relative
+}
+
+#photographers-page .photographers-container .content {
+    width: 65%;
+    height: 35vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#photographers-page .photographers-container .content h2,
+#photographers-page .photographers-container .content h3 {
+    font-weight: 700;
+}
+
+#photographers-page .photographers-container .content .details,
+#photographers-page .photographers-container .content .galleria {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 50%;
+}
+
+#photographers-page .photographers-container .content h2,
+#photographers-page .photographers-container .content h3,
+#photographers-page .photographers-container .content p,
+#photographers-page .photographers-container .content img {
+    margin: 1% 0 !important;
+}
+
+#photographers-page .photographers-container .content .details p {
+    overflow:clip;
+    font-size: small !important;
+}
+
+#photographers-page .photographers-container .content .galleria .gallery-tiles {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+#photographers-page .photographers-container .content .galleria .gallery-tiles img {
+    width: 32%;
+    object-fit: cover;
+}

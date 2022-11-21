@@ -5,11 +5,10 @@
     font-size: 2.5rem;
     color: #FFFFFF;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .outer-cntr {
-    width: 70%;
     margin: auto;
 }
 
@@ -46,8 +45,8 @@
 .blog-title {
     font-weight: 600;
     margin-bottom: 0;
-    padding: 0.6%;
-    font-size: 1.3rem;
+    padding: 1% 0.6% !important;
+    font-size: 1.3rem !important;
     text-transform: uppercase;
     color: #FFFFFF;
     text-align: left;
@@ -59,10 +58,7 @@
 .desc {
     font-weight: 500;
     font-size: 0.9rem;
-    margin-bottom: 0;
-    padding-left: 0.6%;
-    padding-right: 0.6%;
-    margin-bottom: 1%;
+    padding: 0.09% 0.6% !important;
     color: #FFFFFF;
     text-align: left;
     -webkit-box-orient: vertical;
@@ -119,13 +115,19 @@
     white-space: normal;
 } */
 
+.toggleBtn {
+    text-align: center;
+}
+
 .toggleBtn button,
 .toggleBtn button:hover {
-    margin-top: 3rem;
+    height: 3rem;
+    width: 10rem;
+    margin: 2.5% 0 5% 0;
     border: 2px solid #FFFFFF;
     border-radius: 12px;
     font-weight: 700;
-    font-size: 130%;
+    font-size: 150%;
     padding: 0.4% 2% 0.4% 2%;
     background: linear-gradient(91.89deg, #C526D2 1.09%, #6D4AE1 89.64%);
     -webkit-background-clip: text;

@@ -1,8 +1,8 @@
 import React from 'react'
 function Footer() {
   return (
-      <div style={{ marginTop: "5rem", padding: "2%", background: "#475462", textAlign: "center" }}>
-          <p style={{ margin: 0, fontWeight: 500, fontSize: "0.75rem" }}>Camhire VENDOUT INDIA PRIVATE LIMITED</p>
+      <div id='footer' style={{ padding: "2.5%", background: "#475462", bottom: 0, position: "absolute", width: "100%", marginTop: "5%" }}>
+          <p style={{ margin: 0, textAlign: "center" }}>Camhire VENDOUT INDIA PRIVATE LIMITED</p>
       </div>
   )
 }
