@@ -1,10 +1,10 @@
 import React from 'react';
 import './css/Features.css';
 import data from "../data/data.json";
+import centerBackground from '../images/camera.png';
+import sideBackground from '../images/wing.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDollarSign, faCheck, faCamera, faMugHot } from "@fortawesome/free-solid-svg-icons";
-import centerBackground from '../images/pngwing.png';
-import sideBackground from '../images/pngwing2.png';
 
 const Features = () => {
   return (
@@ -14,7 +14,7 @@ const Features = () => {
         {data.Features
           ? data.Features.map((d, i) => {
             return (
-              <div className='content-block'>
+              <div key={i} className='content-block'>
                 <div className='icon-wrapper'>
                   <FontAwesomeIcon icon={i === 0 ? faDollarSign : i === 1 ? faCheck : i === 2 ? faCamera : faMugHot} />
                 </div>
@@ -29,4 +29,4 @@ const Features = () => {
   )
 }
 
-export default Features;
+export default Features

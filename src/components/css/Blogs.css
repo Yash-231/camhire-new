@@ -1,6 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Poppins"); */
-
-.heading {
+#blogs .heading {
     font-weight: 700;
     font-size: 2.5rem;
     color: #FFFFFF;
@@ -8,11 +6,15 @@
     text-align: center;
 }
 
-.outer-cntr {
+#blogs .outer-cntr {
     margin: auto;
 }
 
-.blog {
+#blogs .outer-cntr a {
+    text-decoration: none;
+}
+
+#blogs .outer-cntr .blog {
     position: relative;
     height: 25vw;
     margin-bottom: 2%;
@@ -20,7 +22,8 @@
     background-position: center;
 }
 
-.right-blog, .left-blog {
+#blogs .outer-cntr .right-blog,
+#blogs .outer-cntr .left-blog {
     display: inline-block;
     position: relative;
     left: 0;
@@ -31,22 +34,22 @@
     background-position: center;
 }
 
-.right-blog {
+#blogs .outer-cntr .right-blog {
     margin-left: 1%;
 }
 
-.blog-desc {
+#blogs .outer-cntr .blog-desc {
     width: 100%;
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.84);
 }
 
-.blog-title {
+#blogs .outer-cntr .blog-title {
     font-weight: 600;
     margin-bottom: 0;
-    padding: 1% 0.6% !important;
-    font-size: 1.3rem !important;
+    padding: 1% 0.6%;
+    font-size: 1.3rem;
     text-transform: uppercase;
     color: #FFFFFF;
     text-align: left;
@@ -55,10 +58,10 @@
     white-space: nowrap;
 }
 
-.desc {
+#blogs .outer-cntr .desc {
     font-weight: 500;
     font-size: 0.9rem;
-    padding: 0.09% 0.6% !important;
+    padding: 0.09% 0.6%;
     color: #FFFFFF;
     text-align: left;
     -webkit-box-orient: vertical;
@@ -69,58 +72,12 @@
     white-space: normal;
 }
 
-
-/* .ant-col a {
-    text-decoration: none;
-}
-
-[class*="ant-card-hoverable"] {
-    width: 58.33%;
-}
-
-.ant-card-cover img {
-    height: 20vw;
-}
-
-.ant-card-body {
-    height: auto;
-    background: rgba(0, 0, 0, 0.84);
-    padding: 1%;
-}
-
-.ant-card-meta {
-    color: #fff;
-}
-
-.ant-card-meta-title {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: 0 !important;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.ant-card-meta-description {
-    color: #FFFFFF;
-    text-align: left;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-} */
-
-.toggleBtn {
+#blogs .toggleBtn {
     text-align: center;
 }
 
-.toggleBtn button,
-.toggleBtn button:hover {
+#blogs .toggleBtn button,
+#blogs .toggleBtn button:hover {
     height: 3rem;
     width: 10rem;
     margin: 2.5% 0 5% 0;
@@ -136,11 +93,17 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .blog, .left-blog, .right-blog {
+
+    #blogs .outer-cntr .blog,
+    #blogs .outer-cntr .left-blog,
+    #blogs .outer-cntr .right-blog {
         height: 30vh;
     }
-    .left-blog, .right-blog {
+
+    #blogs .outer-cntr .left-blog,
+    #blogs .outer-cntr .right-blog {
         width: 100%;
         margin: auto 0;
     }
+
 }

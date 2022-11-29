@@ -1,58 +1,31 @@
-import React from "react";
-import shortVideo from "../video/CamHire_vid.mp4";
-import aboutUSPicture from "../images/landing_page.jpg";
-import photographerBackground from "../images/pngwing.png";
-import "./Home.css";
+import React, { useState } from "react";
+import "./css/Home.css";
+import Features from "./Features";
 import Slider from './Slider';
 import Blogs from './Blogs';
 import Gallery from "./Gallery";
 import ContactUs from "./ContactUs";
 import { Link } from 'react-router-dom';
-import Features from "./Features";
+import shortVideo from "../videos/CamHire_vid.mp4";
+import aboutUSPicture from "../images/landing_page.jpg";
+import photographerBackground from "../images/camera.png";
 
 const Home = () => {
 
+  const [active, setActive] = useState(true);
+
+  const handleClose = () => {
+    setActive(false);
+  }
+
   return (
-    <div className="Home-container">
-      {/* <div className="wrapper">
-        <div className="join-us">
-          <div>
-            <button className="join-us-button">Join Us</button>
-            <button className="close-button" type="button">X</button>
-          </div>
-        </div>
-        <div className="header">
-          <div className="header__left">
-            <h3 className="header__h3">
-              Endless Possibilities with <b className="cam__text">Camera</b>{" "}
-              just a Click Away
-            </h3>
-            <h4 className="header__h4">
-              We are the string which enables you to connects the best
-              photographers in easiest way possible
-            </h4>
-            <button className="learn-more__button">Learn more</button>
-          </div>
-          <div className="header__right">
-            <div className="video__container">
-              <div className="video video__player"></div>
-              <video
-                autoPlay
-                loop
-                muted
-                className="video__player"
-              >
-                <source src={shortVid} type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div> */}
+    <>
       <div id="wrapper">
-        <div className="button-wrapper">
-          <button>
-            <span>Join Us</span>
-            <span>X</span>
-          </button>
+        <div className="button-wrapper" style={!active ? { display: "none" } : { display: "flex" }}>
+          <span>
+            <button className="main-button">Join Us</button>
+            <button className="dismiss" onClick={handleClose}>X</button>
+          </span>
         </div>
         <div className="rest-content">
           <div className="left-block">
@@ -77,7 +50,7 @@ const Home = () => {
         <h1>About Us</h1>
         <div className="about-us-content">
           <div className="about-us-paragraph">
-            <p>Three years back, five mavericks saw a dream to take a journey off-beat from what they were doing and jumped into a pool of creating stories by capturing moments. One day while sitting in the backyard, one of the stakeholders, also a passionate photographer, pondered the endless hurdles in the business world of photography. Whether it was about finding the best photographers from different corners of the country or picking the apt one according to your style. CamHire is an endeavour to overcome all those barriers and fulfil that very motive of photography. We help photographers and freelancers connect with clients all over Indiato provide desired services. CamHire started off as an expression of...</p>
+            <p>Three years back, five mavericks saw a dream to take a journey off-beat from what they were doing and jumped into a pool of creating stories by capturing moments. One day while sitting in the backyard, one of the stakeholders, also a passionate photographer, pondered the endless hurdles in the business world of photography. Whether it was about finding the best photographers from different corners of the country or picking the apt one according to your style. CamHire is an endeavour to overcome all those barriers and fulfil that very motive of photography. We help photographers and freelancers connect with clients all over Indiato provide desired services. CamHire started off as an expression of Suraj’s hunger for creativity to build photographic content by using different lenses. Adding to his passion for the trueessence of photography, Kuldeep and Yash brought their technical and financial minds,respectively. The marketing brain behind the lenses came forward with the emerging entrepreneur, Simar, who lent all his wisdom to turn a vision into a brand. CamHire became a perfect amalgamation of all the business skills and creative interests.Inspired to look at the world through camera lenses, a venture was born that aims to capture the beauty of human emotions in their truest form.</p>
             <Link to="/about">...ReadMore</Link>
           </div>
           <img src={aboutUSPicture} alt="about us" />
@@ -94,9 +67,8 @@ const Home = () => {
       <Gallery />
       <hr />
       <ContactUs />
-    </div>
+    </>
   );
-
 }
 
 export default Home;

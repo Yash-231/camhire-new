@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
-
 #gallery {
     margin-bottom: 5%;
 }
 
 #gallery h1 {
     text-align: center;
-    margin-bottom: 5% !important;
+    margin-bottom: 5%;
 }
 
 #gallery .gallery-container>.row:not(#gallery .gallery-container > .row:nth-child(2)) {

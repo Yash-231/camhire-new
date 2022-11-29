@@ -1,7 +1,7 @@
 import React from 'react';
-import vector from "../images/vector.png";
-import profile from "../images/Ellipse12.png";
 import './css/AboutUs.css';
+import vector from "../images/vector.png";
+import profile from "../images/ellipse.png";
 
 const AboutUs = () => {
 

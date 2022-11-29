@@ -1,6 +1,6 @@
 import React from "react";
-import data from "../data/data.json";
 import "./css/Photographers.css";
+import data from "../data/data.json";
 
 const Photographers = () => {
 
@@ -13,7 +13,7 @@ const Photographers = () => {
                         return (i % 2 === 0
                             ?
                             (
-                                <div className="photographers-container">
+                                <div key={i} className="photographers-container">
                                     <div className="profile-image">
                                         <img src={d.imageUrl} alt={d.title} />
                                         <span>{d.title.toUpperCase()}</span>
@@ -36,7 +36,7 @@ const Photographers = () => {
                             )
                             :
                             (
-                                <div className="photographers-container">
+                                <div key={i} className="photographers-container">
                                     <div className="content">
                                         <div className="details">
                                             <h2>{d.title.toUpperCase()}</h2>

@@ -19,13 +19,12 @@
     height: 35vw;
 }
 
-
 #photographers-page .photographers-container .profile-image::after {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 15px;
-    padding: 5px;
+    padding: 2px;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, #C526D2 0%, #6D4AE1 112.56%);
@@ -60,7 +59,7 @@
 #photographers-page .photographers-container .content {
     padding: 0 2%;
     width: 65%;
-    position: relative
+    position: relative;
 }
 
 #photographers-page .photographers-container .content {
@@ -73,6 +72,7 @@
 #photographers-page .photographers-container .content h2,
 #photographers-page .photographers-container .content h3 {
     font-weight: 700;
+    font-size: 200%;
 }
 
 #photographers-page .photographers-container .content .details,
@@ -92,7 +92,6 @@
 
 #photographers-page .photographers-container .content .details p {
     overflow:clip;
-    font-size: small !important;
 }
 
 #photographers-page .photographers-container .content .galleria .gallery-tiles {

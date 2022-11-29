@@ -1,22 +1,23 @@
 import React from 'react';
-import './Blogposts.css';
+import './css/Blogposts.css';
 import { useLocation } from 'react-router-dom';
 
 const Blogposts = () => {
-    const location = useLocation();
-    
+  
+  const location = useLocation();
+
   return (
-    <>
-    <h1 className='heading'>Blogs</h1>
-    <div className="container-outer">
-        <img src={location.state.imageUrl} className="img-fluid" alt="blog"/>
+    <div id="blogposts">
+      <h1>Blogs</h1>
+      <div className="container-outer">
+        <img src={location.state.imageUrl} alt="blog" />
         <div className="container-inner">
-            <h2 className='pt-5 text-start'>{location.state.title}</h2>
-            <p className='pt-4 pb-5'>{location.state.body}</p>
+          <h2>{location.state.title}</h2>
+          <p>{location.state.body}</p>
         </div>
-        <img src={location.state.imageUrl} className="img-fluid" alt="blog"/>
+        <img src={location.state.imageUrl} alt="blog" />
+      </div>
     </div>
-    </>
   )
 }
 

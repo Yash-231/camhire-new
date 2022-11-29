@@ -9,6 +9,7 @@ import img6 from "../images/gallery-img-6.jpg";
 import img7 from "../images/gallery-img-7.jpg";
 
 const Gallery = () => {
+  
     return (
         <div id='gallery'>
           <div className='gallery-title'>

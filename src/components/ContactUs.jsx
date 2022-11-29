@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import "./css/ContactUs.css";
+import emailjs from '@emailjs/browser';
 import { MdPhone, MdMailOutline } from "react-icons/md";
 import { TbLocation } from "react-icons/tb";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import "./css/ContactUs.css";
 
 const ContactUs = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY);
+        form.current.reset();
+    };
 
     return (
         <div id="contact">
@@ -33,34 +42,34 @@ const ContactUs = () => {
                     </div>
                 </div>
                 <div className='contact-right'>
-                    <form action=''>
+                    <form ref={form} onSubmit={sendEmail}>
                         <div className='contact-right-item'>
                             <input type="text" name="name" placeholder="Name" />
                         </div>
                         <div className='contact-right-item'>
-                            <input type="email" name="email" placeholder="E-mail" />
+                            <input type="email" name="email" placeholder="E-mail" required />
                         </div>
                         <div className='contact-right-item'>
-                            <textarea name="message" placeholder='Type your message here' />
+                            <textarea name="message" placeholder='Type your message here' required />
                         </div>
                         <div className='contact-right-item'>
-                            <input type="submit" value="Send Us" />
+                            <button type="submit">Send Us</button>
                         </div>
                     </form>
                 </div>
             </div>
             <hr />
             <div className="social-links">
-                <a href="" target="_blank" className="social-icon-wrapper">
+                <a href="/" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper">
                     <FaFacebookF />
                 </a>
-                <a href="https://youtube.com/channel/UCpWnluYyvqgrI5_EWhrBhdg" target="_blank" className="social-icon-wrapper">
+                <a href="https://youtube.com/channel/UCpWnluYyvqgrI5_EWhrBhdg" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper">
                     <FaYoutube />
                 </a>
-                <a href="https://instagram.com/cam_hire/" target="_blank" className="social-icon-wrapper">
+                <a href="https://instagram.com/cam_hire/" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper">
                     <FaInstagram />
                 </a>
-                <a href="https://www.linkedin.com/company/camhirephotography/" target="_blank" className="social-icon-wrapper">
+                <a href="https://www.linkedin.com/company/camhirephotography/" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper">
                     <FaLinkedinIn />
                 </a>
             </div>
