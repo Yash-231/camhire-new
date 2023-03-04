@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
 
     const [next, setNext] = useState(4);
+    const isDesktop = window.innerWidth > 1024;
 
     const showMore = () => {
         setNext(next + 4);
@@ -56,10 +57,13 @@ const Blogs = () => {
                 }
             </div>
             <div className='toggleBtn'>
+            {isDesktop &&
+            <>
                 {next >= data.Blogs.length ?
                     <button onClick={showLess} className="moreLessBtn">Less...</button>
                     :
                     <button onClick={showMore} className="moreLessBtn">More...</button>}
+                    </>}
             </div>
         </div>
     )

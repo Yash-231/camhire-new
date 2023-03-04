@@ -1,7 +1,7 @@
 #navbar {
     height: 5.5rem;
     padding: 0 15%;
-    background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+    background: linear-gradient(90deg, #C526D2 0.04%, #9639DA 26%, #6D4AE1 100%);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -29,7 +29,7 @@
 }
 
 #navbar .links {
-    list-style-type: none; 
+    list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,4 +45,92 @@
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1vw;
+}
+
+#navbar .links li:has(a.active) {
+    border-bottom: 3px solid #FFFFFF;
+}
+
+@media screen and (max-width: 991px) {
+
+    #navbar {
+        display: block;
+        background: none;
+        padding: 0 7.5%;
+        position: relative;
+    }
+
+    #navbar .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #navbar .wrapper svg {
+        align-self: center;
+    }
+
+    #navbar .wrapper .links {
+        display: none;
+    }
+
+    #navbar .wrapper .expanded {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(180deg, #B727C7 0%, rgba(73, 89, 230) 100%);
+        /* transition: all 1s ease-in-out; */
+        /* animation-name: example;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out; */
+    }
+
+    /* @keyframes example {
+        0% {
+            transform:scaleY(0);
+        }
+
+        100% {
+            transform: scaleY(100%);
+        }
+    } */
+
+    #navbar .wrapper .links>hr {
+        height: 1px;
+        width: 100%;
+        opacity: 1;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff);
+        border: none;
+        margin: 0;
+    }
+
+    #navbar .wrapper .links li {
+        padding: 5%;
+    }
+
+    #navbar .wrapper .links a {
+        font-size: 1.25rem;
+    }
+
+    #navbar .wrapper .links li:first-child {
+        padding: 3.25% 5%;
+        background: rgba(217, 217, 217, 0.3);
+    }
+
+    #navbar .wrapper .links li:first-child svg {
+        margin-top: 10%;
+    }
+
+    #navbar .wrapper .links li:has(a.active) {
+        border-bottom: none;
+    }
+
 }

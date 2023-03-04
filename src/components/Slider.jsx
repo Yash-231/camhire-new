@@ -58,7 +58,7 @@ const Sliders = () => {
       {data.Photographers.map((d, i) => {
         return (
           <div key={i} className={`photographer-card ${current.includes(i) ? "active" : ""} ${current[1]===i ? "center" : ""}`} style={{ display: current.includes(i) ? "block" : "none" }}>
-            <img src={d.imageUrl} alt={d.title} style={{ transition: current[1]===i ? "height 1s" : "", height: current[1]===i ? "70vh" : "45vh" }}/>
+            <img src={d.imageUrl} alt={d.title} />
             <span className="photographer-card-title" style={{ display: current[1] === i ? "inline-flex" : "none" }}>
               {d.title.toUpperCase()}
             </span>

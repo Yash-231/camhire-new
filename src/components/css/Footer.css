@@ -3,7 +3,7 @@
     padding: 1.5%;
     position: absolute;
     bottom: 0;
-    background: #475462;
+    background: linear-gradient(90deg, #C526D2 0.04%, #9639DA 26%, #6D4AE1 100%);
 }
 
 #footer p {
