@@ -60,9 +60,9 @@ const ContactUs = () => {
             </div>
             <hr />
             <div className="social-links">
-                <a href="/" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper">
+                {/* <a href="/" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper">
                     <FaFacebookF />
-                </a>
+                </a> */}
                 <a href="https://youtube.com/channel/UCpWnluYyvqgrI5_EWhrBhdg" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper">
                     <FaYoutube />
                 </a>
